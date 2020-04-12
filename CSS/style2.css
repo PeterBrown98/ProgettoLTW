@@ -1,0 +1,28 @@
+form{
+   
+    padding: 30px 0px 0px 0px ;
+    color: white; 
+}
+
+body {
+    background: url(/IMMAGINI/sfondo.jpg) no-repeat;
+    background-attachment: fixed;
+     background-size: cover;
+     color: white; 
+}  
+button{
+    width: 30%;
+    margin-right: 40px;
+
+} 
+
+footer{
+    background-color: #333;
+   text-align: center;
+   color:white;
+   padding: 20px; 
+   
+   bottom: 0;
+   width: 100%;
+   position: fixed;
+  }
