@@ -1,0 +1,17 @@
+form{
+   
+    padding: 60px 0px 0px 0px ;
+    color: white; 
+}
+
+body {
+    background: url(sfondo.jpg) no-repeat;
+    background-attachment: fixed;
+     background-size: cover;
+     color: white; 
+}  
+button{
+    width: 30%;
+    margin-right: 40px;
+
+} 
