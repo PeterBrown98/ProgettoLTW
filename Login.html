@@ -1,0 +1,36 @@
+<html>
+<head>
+  <script type="text/javascript">
+    function validaForm(){
+      if(document.accesso.username.value==""){alert("È necessario inserire l'username per effettuare il login"); return false;}
+      if(document.accesso.password.value==""){alert("È necessario inserire la password per effettuare il login"); return false;}
+      return true;
+    }
+     function access(){
+       document.accesso.submit();
+     if(validaForm()) window.location.href='/home/pc/Foodream/homeSito.html';
+    }
+     function signUp(){window.location.href='/home/pc/Foodream/Registrazione.html';}
+
+  </script>
+  <meta name="viewport" content="width-device-width, initial-scale=1"/>
+  <style type="text/css">
+  H1 {font-size:17px; color:white}
+  fieldset{height: 40%; width: 50%}
+  input[id=id1] {background-color: green}
+
+  </style>
+</head>
+<body background="/home/pc/Foodream/Immagini/homeLogin.jpg">
+  <div align="right">
+  <fieldset>
+    <legend>LOGIN</legend>
+    <form  name="accesso"action="" method="post" onSubmit="validaForm();">
+      Username <input name="username" type="text" id="idun" name="" value=""> <br> <br>
+      Password <input name="password" type="password" id="idpw" name="" value=""> <br> <br>
+     <input type="button" name="accedi" value="Accedi" id="idacc" onClick="return access();">  <input type="button" name="registrati" value="Registrati" id="idreg" onClick="signUp();">
+  </fieldset>
+  </div>
+</body>
+
+</html>
