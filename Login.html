@@ -2,6 +2,7 @@
 <head>
   <script type="text/javascript" src="javascript/login.js"> </script>
   <meta name="viewport" content="width-device-width, initial-scale=1"/>
+  <meta name="viewport" content="height=device-height, initial-scale=1"/>
   <title>Login</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="CSS/style2.css">
@@ -25,16 +26,16 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="Homepage.html">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Login</a>
+          <a class="nav-link" href="Login.html">Login</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="registrazione2.html">Registrazione</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="about.html">About</a>
         </li>
         
       </ul>
@@ -44,19 +45,19 @@
 
   <div class="col-md-4 offset-md-7">
     <div class="row-md-2 offset-md-1">
-    <form id="formLog">
+    <form id="formLog" name="accesso">
       <div class="form-group">
         <label for="exampleInputEmail1">Email</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <input type="email" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         <br>
         <br>
       <div class="form-group">
         <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1">
+        <input type="password" name="password" class="form-control" id="exampleInputPassword1">
         <br>
       </div>
       <br>
-      <button type="submit" class="btn btn-primary">Invia</button>
+      <button type="submit" class="btn btn-primary" onClick="return access();">Invia</button>
       
     </form>
   </div>

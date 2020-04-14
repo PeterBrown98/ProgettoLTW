@@ -28,6 +28,6 @@ footer{
   }
 form[id="formLog"]{
 
-    padding: 190px 0px 0px 0px;
+    bottom: 40%;
     color: white;
 }
