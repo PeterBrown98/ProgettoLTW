@@ -8,32 +8,68 @@
     }
      function access(){
        document.accesso.submit();
-     if(validaForm()) window.location.href='/home/pc/Foodream/homeSito.html';
+     if(validaForm()) window.location.href='/home/pc/Documenti/FooDream/Homepage.html';
     }
-     function signUp(){window.location.href='/home/pc/Foodream/Registrazione.html';}
+     function signUp(){window.location.href='/home/pc/Documenti/FooDream/registrazione2.html';}
 
   </script>
   <meta name="viewport" content="width-device-width, initial-scale=1"/>
   <title>Login</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" href="CSS/style2.css">
+  <link rel="stylesheet" href="CSS/styleLog.css">
   <style type="text/css">
   H1 {font-size:17px; color:white}
-  fieldset{height: 40%; width: 50%}
-  input[id=id1] {background-color: green}
+  fieldset{height: 10%; width: 50%;}
 
   </style>
 </head>
-<body background="IMMAGINI/login.jpg">
+<body>
+  <nav class="navbar navbar-expand-lg  navbar-dark bg-dark" id="navbar">
+    <a class="navbar-brand" href="#">
+      <img src="IMMAGINI/foodream2.png" width="70" height="50" class="d-inline-block align-top" alt="">
+      
+    </a>
+     
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="registrazione2.html">Registrazione</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        
+      </ul>
+      
+    </div>
+  </nav>
   <div align="center">
   <fieldset>
-    <legend>LOGIN</legend>
+    <legend> <b> LOGIN </b></legend>
     <form  name="accesso"action="" method="post" onSubmit="validaForm();">
       Username <input name="username" type="text" id="idun" name="" value=""> <br> <br>
       Password <input name="password" type="password" id="idpw" name="" value=""> <br> <br>
-     <input type="button" name="accedi" value="Accedi" id="idacc" onClick="return access();">  <input type="button" name="registrati" value="Registrati" id="idreg" onClick="signUp();">
+      <button type="button" name="accedi" class="btn btn-success" onClick="return access();">Accedi</button>
+      <button type="button" name="registrati" class="btn btn-danger" onClick="return signUp();">Registrati</button>
   </fieldset>
   </div>
+  <div id="footer">
+    <footer>
+      <p>
+          Copyright &copy;<script>document.write(new Date().getFullYear());</script>,  Foodream 
+          </p>
+    </footer>
+  </div>  
 </body>
 
 </html>
