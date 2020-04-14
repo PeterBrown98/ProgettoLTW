@@ -16,7 +16,7 @@
   <meta name="viewport" content="width-device-width, initial-scale=1"/>
   <title>Login</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" href="CSS/styleLog.css">
+  <link rel="stylesheet" href="CSS/style2.css">
   <style type="text/css">
   H1 {font-size:17px; color:white}
   fieldset{height: 10%; width: 50%;}
@@ -53,16 +53,29 @@
       
     </div>
   </nav>
-  <div align="center">
-  <fieldset>
-    <legend> <b> LOGIN </b></legend>
-    <form  name="accesso"action="" method="post" onSubmit="validaForm();">
-      Username <input name="username" type="text" id="idun" name="" value=""> <br> <br>
-      Password <input name="password" type="password" id="idpw" name="" value=""> <br> <br>
-      <button type="button" name="accedi" class="btn btn-success" onClick="return access();">Accedi</button>
-      <button type="button" name="registrati" class="btn btn-danger" onClick="return signUp();">Registrati</button>
-  </fieldset>
+
+  <div class="col-md-4 offset-md-7">
+    <div class="row-md-2 offset-md-1">
+    <form id="formLog">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <br>
+        <br>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+        <br>
+      </div>
+      <br>
+      <button type="submit" class="btn btn-primary">Invia</button>
+      
+    </form>
   </div>
+  </div>
+
+
+
   <div id="footer">
     <footer>
       <p>

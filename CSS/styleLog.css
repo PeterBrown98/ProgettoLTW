@@ -7,7 +7,7 @@ form{
 body {
     background: url(../IMMAGINI/login.jpg) no-repeat;
     background-attachment: fixed;
-     background-size: cover;
+    background-size: cover;
      color: white; 
 }  
 button{
