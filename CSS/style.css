@@ -42,41 +42,65 @@ Cover Homepage
 
 
 .cover{
-  height: 40%;
+  height: 7700px;
   background-image: url(/IMMAGINI/cioccolato-fondente.jpg);
   background-size: cover;
   -o-background-size: cover;
   -moz-background-size: cover;
   background-position: center center;
   position: relative;
-  z-index: 0.5;
+  border-color: red;
+  border: 10px;
+  width: 100%;
 }
+
+
 
 
 .caption{
   width: 100%;
   height: 100%;
   position: absolute;
-  z-index: 1;
 }
 
-.filtro{
-  z-index: 1;
-  color: black;
-  position: absolute;
-}
+
 
 
 .titoloCover{
   font-size: 90px;
   color: #fff;
-  text-shadow: black 10px 10px;
-  z-index: 1.5;
+  text-shadow: black 9px 9px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 .testoCover{
-  color: aliceblue;
+  color: #fff;
   text-align: center;
-  font-size: 25px;
+  font-size: 50px;
   font: outline;
+  margin-top: 70px;
+}
+
+/*-----------------------
+Card Istruzioni
+-------------------------*/
+
+.insTitle{
+  font-size: 87px;
+  text-align: center;
+  font: outline;
+}
+
+#istr{
+  border: 3px inset rgba(107,87,87,0.87);
+  border-radius: 45px 45px 45px 45px;
+  height:700px;
+  margin-top: 30px;
+  margin-right: 10px;
+  margin-bottom: 30px;
+}
+
+
+.inst{
+  font-size: 50px;
 }
