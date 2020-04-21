@@ -50,20 +50,19 @@ footer{
 Carosello
 -------------------------*/
 
+
 .caroselloContainer{
   height: 600px;
   width: 1200px;
   margin: 0 auto;
   margin-top: 50px;
-  margin-bottom: 100px;
-  
+  margin-bottom: 200px;
 }
 
 .tipoPiatto{
-  font-size: 70px;
+  font-size: 90px;
   text-shadow:7px 5px black;
 }
-
 
 /*-----------------------
 Card Istruzioni
@@ -73,6 +72,7 @@ Card Istruzioni
   font-size: 87px;
   text-align: center;
   font: outline;
+  margin-top: 50px;
 }
 
 #istr{
@@ -87,4 +87,18 @@ Card Istruzioni
 
 .inst{
   font-size: 50px;
+}
+
+/*-----------------------
+Link registrazione/accesso homepage
+-------------------------*/
+
+.homeLogin, .homeSignup{
+  font-size: 60px;
+  margin-top: 30px;
+  color: green;
+}
+.homeLogin:hover, .homeSignup:hover{
+  color: blueviolet;
+  text-decoration: dotted;
 }
