@@ -9,7 +9,7 @@
         <meta name="viewport" content="width-device-width, initial-scale=1"/>
         <meta name="viewport" content="height=device-height, initial-scale=1"/>   
     </head>
-    <body class="d-flex flex-column">
+    <body>
         <nav class="navbar navbar-expand-lg  navbar-dark bg-dark" id="navbar">
             <a class="navbar-brand" href="#">
               <img src="IMMAGINI/foodream2.png" width="70" height="50" class="d-inline-block align-top" alt="">
@@ -36,24 +36,60 @@
               </ul>
             </div>
           </nav>
-
-        <section class="cover">
-          <div class="row">
-            <div class="col-md-4"></div>
-            <div class="col-md-4">
-              <div class="caption">
-                  <h1 class="titoloCover text-center"><strong>Foodream</strong></h1>
-                  <h2 class="testoCover text-center">BASTA SPRECHI!</h2>
+       
+       
+    <main>
+            
+      <div class="caroselloContainer">      
+        <section class="carosello">
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="IMMAGINI/pasta.jpg" alt="First slide">
+                <div class="carousel-caption d-none d-md-block">
+                  <h1 class="tipoPiatto">Primi piatti</h1>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="IMMAGINI/carne-e-pesce.jpg" alt="Second slide">
+                <div class="carousel-caption d-none d-md-block">
+                  <h1 class="tipoPiatto">Secondi piatti</h1>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="IMMAGINI/verdure_fresche-1200x800.jpg" alt="Third slide">
+                <div class="carousel-caption d-none d-md-block">
+                  <h1 class="tipoPiatto">Contorni</h1>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="IMMAGINI/cioccolato-fondente.jpg" alt="Fourth slide">
+                <div class="carousel-caption d-none d-md-block">
+                  <h1 class="tipoPiatto">Dolci</h1>
+                </div>
               </div>
             </div>
-            <div class="col-md-4"></div>  
-          </div>  
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
         </section>
+      </div>
       
       
-      
-      <section>  
-        <div class="container" id="istruzioni">
+      <div class="container-fluid">  
+        <section class="container" id="istruzioni">
           <h1 class="insTitle">ISTRUZIONI PER L'USO</h1>
           <div class="row">
             <div class="col md-4" id="istr">
@@ -69,8 +105,11 @@
               <h2 class="inst">Seleziona la ricetta che più preferisci</h2>
             </div> 
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
+
+
+    </main>
       
       
       <footer id="sticky-footer" class="py-4 bg-dark text-white">

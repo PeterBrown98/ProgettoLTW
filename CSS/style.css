@@ -1,3 +1,10 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+
 form{
    
     padding: 30px 10px 0% 10px ;
@@ -20,6 +27,10 @@ button{
 html,body {
     height: 100%;
   }
+ 
+main{
+  min-height: calc(100vh - 76px - 72px);
+}
 
 #page-content {
     flex: 1 0 auto;
@@ -30,56 +41,29 @@ Footer
 -------------------------*/
 #sticky-footer {
     flex-shrink: none;
-    
   }
 footer{
   color: green;
 }
 
 /*-----------------------
-Cover Homepage
+Carosello
 -------------------------*/
 
-
-.cover{
-  height: 7700px;
-  background-image: url(/IMMAGINI/cioccolato-fondente.jpg);
-  background-size: cover;
-  -o-background-size: cover;
-  -moz-background-size: cover;
-  background-position: center center;
-  position: relative;
-  border-color: red;
-  border: 10px;
-  width: 100%;
+.caroselloContainer{
+  height: 600px;
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  
 }
 
-
-
-
-.caption{
-  width: 100%;
-  height: 100%;
-  position: absolute;
+.tipoPiatto{
+  font-size: 70px;
+  text-shadow:7px 5px black;
 }
 
-
-
-
-.titoloCover{
-  font-size: 90px;
-  color: #fff;
-  text-shadow: black 9px 9px;
-  font-family: "Comic Sans MS", cursive, sans-serif;
-}
-
-.testoCover{
-  color: #fff;
-  text-align: center;
-  font-size: 50px;
-  font: outline;
-  margin-top: 70px;
-}
 
 /*-----------------------
 Card Istruzioni
