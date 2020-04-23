@@ -239,4 +239,10 @@ section[id="steps"]{
 #rimandi{
   margin-top: 20px;
   margin-bottom: 20px;
+
+}
+
+#descrizione{
+  text-align: center;
+  padding: 0px 10px 0px 10x;
 }
