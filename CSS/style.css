@@ -4,6 +4,22 @@
 }
 
 
+.carousel {
+  height: 400px;
+}
+
+.carousel-item{
+    color: white;
+    height: 400px;
+}
+
+
+
+
+
+
+
+
 
 form{
    
@@ -52,11 +68,12 @@ Carosello
 
 
 .caroselloContainer{
-  height: 600px;
-  width: 1200px;
+  height: 200px;
+  width: 100%;
   margin: 0 auto;
-  margin-top: 50px;
-  margin-bottom: 200px;
+ 
+  
+
 }
 
 .tipoPiatto{
@@ -72,7 +89,7 @@ Card Istruzioni
   font-size: 87px;
   text-align: center;
   font: outline;
-  margin-top: 50px;
+
 }
 
 
@@ -91,6 +108,7 @@ Card Istruzioni
   position: relative;
   background-color: #f9f9f9;
   min-width: 160px;
+  color: #fff;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   padding: 12px 16px;
   z-index: 1;
@@ -98,6 +116,7 @@ Card Istruzioni
 
 .dropdown:hover .dropdown-content {
   display: block;
+  color: #fff;
   border: 3px inset rgba(107,87,87,0.87);
   border-radius: 45px 45px 45px 45px;
   height: 300px;
@@ -117,15 +136,11 @@ span{
 Link registrazione/accesso homepage
 -------------------------*/
 
-.homeLogin, .homeSignup{
-  font-size: 60px;
-  margin-top: 30px;
-  color: green;
+.text-center{
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
-.homeLogin:hover, .homeSignup:hover{
-  color: blueviolet;
-  text-decoration: dotted;
-}
+
 
 
 
@@ -142,9 +157,12 @@ Link registrazione/accesso homepage
 	position: relative;
 	width: 280px;
 	height: 400px;
-	margin: 20px 0;
+  margin: 20px 0;
+  margin-left: 40px;
+  margin-right: 40px;
 	box-sizing: border-box;
-	overflow: hidden;
+  overflow: hidden;
+ 
 }
 .container .box .imgBx {
 	position: absolute;
@@ -214,3 +232,9 @@ Link registrazione/accesso homepage
 	transition-delay: 0.9s;
 }
 
+section[id="steps"]{
+  position: relative;
+  color: #fff;
+  background-color: #343a40!important;
+  width: 100%;
+}
