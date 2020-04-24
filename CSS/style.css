@@ -21,7 +21,9 @@
 
 
 
-
+body{
+  background-color: #1a1a1a;
+}
 
 
 
@@ -29,6 +31,8 @@ form{
    
     padding: 30px 10px 0% 10px ;
     color: white; 
+    font-size: 20px;
+    
     
 }
 
@@ -247,6 +251,7 @@ section[id="steps"]{
 #rimandi{
   margin-top: 20px;
   margin-bottom: 20px;
+  color: #fff;
 
 }
 
@@ -259,3 +264,4 @@ section[id="steps"]{
 #navbarSupportedContent{
   font-size: 28px;
 }
+
