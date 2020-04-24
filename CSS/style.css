@@ -65,10 +65,8 @@ Footer
 -------------------------*/
 #sticky-footer {
     flex-shrink: none;
+    border-top: solid 2px black;
   }
-footer{
-  color: green;
-}
 
 /*-----------------------
 Carosello
@@ -268,7 +266,8 @@ section[id="steps"]{
   color: #fff;
   background-color: #343a40!important;
   width: 100%;
-  
+  border-top: solid 2px black;
+  border-bottom: solid 2px black;
   font-size: 18px;
   
 }
@@ -277,6 +276,7 @@ section[id="steps"]{
 #rimandi{
   margin-top: 20px;
   margin-bottom: 20px;
+  
   color: #fff;
 
 }
@@ -291,3 +291,10 @@ section[id="steps"]{
   font-size: 28px;
 }
 
+#navbar{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1071;
+  border-bottom: solid 2px black;
+}
