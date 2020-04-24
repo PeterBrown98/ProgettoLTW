@@ -1,6 +1,11 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
 *{
   margin: 0;
   padding: 0;
+  font-family: 'Lobster', cursive;
 }
 
 
@@ -16,8 +21,9 @@
 
 
 
-
-
+body{
+  background-color: #1a1a1a;
+}
 
 
 
@@ -25,6 +31,8 @@ form{
    
     padding: 30px 10px 0% 10px ;
     color: white; 
+    font-size: 20px;
+    
     
 }
 
@@ -91,7 +99,7 @@ Card Istruzioni
 -------------------------*/
 
 .insTitle{
-  font-size: 87px;
+  font-size: 50px;
   text-align: center;
   font: outline;
   padding-top: 150px;
@@ -151,6 +159,7 @@ span{
 Link registrazione/accesso homepage
 -------------------------*/
 
+<<<<<<< HEAD
 .homeLogin, .homeSignup{
   font-size: 60px;
   color: green;
@@ -159,6 +168,8 @@ Link registrazione/accesso homepage
   color: blueviolet;
   text-decoration: dotted;
 }
+=======
+>>>>>>> a64e824b1f7d3d8e5720c4b53a518f422e324639
 
 
 
@@ -170,7 +181,9 @@ Link registrazione/accesso homepage
 	flex-wrap: wrap;
 	justify-content: space-around;
 	margin-left: auto;
-	margin-right: auto;
+  margin-right: auto;
+ 
+  
 }
 .container .box {
 	position: relative;
@@ -189,7 +202,6 @@ Link registrazione/accesso homepage
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: #000;
 	clip-path: circle(400px at center 100px);
 	transition: 0.5s;
 	transition-delay: 0.5s;
@@ -205,7 +217,7 @@ Link registrazione/accesso homepage
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	border-radius: 10px;
+	border-radius: 10%;
 }
 .container .box .content {
 	position: absolute;
@@ -256,4 +268,26 @@ section[id="steps"]{
   color: #fff;
   background-color: #343a40!important;
   width: 100%;
+  
+  font-size: 18px;
+  
 }
+
+
+#rimandi{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #fff;
+
+}
+
+#descrizione{
+  text-align: center;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+#navbarSupportedContent{
+  font-size: 28px;
+}
+
