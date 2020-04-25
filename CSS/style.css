@@ -40,7 +40,8 @@ form{
     background: url(../IMMAGINI/sfondo.jpg) no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    color: white; 
+    color: white;
+    background-size: 60% 100%;
 }  
 button{
     width: 30%;
@@ -53,7 +54,7 @@ html,body {
   }
  
 main{
-  min-height: calc(100vh - 76px - 72px);
+  min-height: calc(100vh - 78px - 74px);
 }
 
 #page-content {
