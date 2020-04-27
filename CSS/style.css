@@ -29,10 +29,9 @@ body{
 
 form{
    
-    padding: 30px 10px 0% 10px ;
     color: white; 
     font-size: 20px;
-    
+    padding-top: 70%;
     
 }
 
@@ -41,7 +40,6 @@ form{
     background-attachment: fixed;
     background-size: cover;
     color: white;
-    background-size: 60% 100%;
 }  
 button{
     width: 30%;
@@ -273,4 +271,38 @@ section[id="steps"]{
   top: 0;
   border-bottom: solid 2px black;
   width: 100%;
+}
+
+
+/*-----------------------
+Prova form login/registrazione modificato
+-------------------------*/
+
+
+.loginForm{
+  background-color: rgba(98,74,46,0.7);
+  border-radius: 45px 45px 45px 45px;
+  height: 400px;
+  width: 300px;
+  padding-top: 50px;
+  padding-left: 20px;
+  margin-left: 70vh;
+  margin-top: 50vh;
+  display: inline-block;
+  color: #000;
+
+}
+.accesso{
+  font-size: 30px;
+  padding-bottom: 30px;
+}
+
+#log{
+  border-radius: 35px;
+  width: 250px;
+  height: 35px;
+}
+.prova{
+  background-image: url(/IMMAGINI/sfondo.jpg);
+
 }
