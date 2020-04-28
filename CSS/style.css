@@ -77,7 +77,8 @@ Carosello
   height: 200px;
   width: 100%;
   margin: 0 auto;
- z-index: 0.5;
+  z-index: 0.5;
+  position: relative;
   
 
 }
@@ -85,6 +86,10 @@ Carosello
 .tipoPiatto{
   font-size: 90px;
   text-shadow:7px 5px black;
+}
+
+.carousel-control-prev .carousel-control-next{
+  top: 78px
 }
 
 /*-----------------------
@@ -279,19 +284,15 @@ Prova form login/registrazione modificato
 -------------------------*/
 
 
-.loginForm{
+.Form{
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 45px 45px 45px 45px;
-  height: 400px;
-  width: 300px;
   padding-top: 50px;
   padding-left: 20px;
-  margin-left: 70vh;
-  margin-top: 50vh;
+  margin-top: 30vh;
   display: inline-block;
   color: #000;
   position: static;
-
 }
 .accesso{
   font-size: 30px;
@@ -323,4 +324,19 @@ Prova form login/registrazione modificato
   background-color: black;
   color: white;
   border-color: black;
+}
+
+input{
+  padding-left: 10px;
+}
+
+
+#login{
+  height: 400px;
+  width: 300px;
+}
+
+
+#signup{
+  
 }

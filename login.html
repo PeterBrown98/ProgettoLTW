@@ -45,19 +45,17 @@
     <div class="row">
      
       <div class="col-md-4 offset-md-8">
-        <form id="formLog" name="accesso">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email</label>
-            <input type="email" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <br>
-            <br>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" name="password" class="form-control" id="exampleInputPassword1">
-            <br>
+        <div class="Form" id="login">
+          <h1 class="accesso">EFFETTUA L'ACCESSO</h1>
+          <div class="nome">
+          <label for="username">Username</label><br>
+          <input type="text" id="log" placeholder="Inserisci il tuo username"><br>
           </div>
-          <br>
-          <button type="submit" class="btn btn-primary" onClick="return access();">Invia</button>
+          <label for="password">Password</label><br>
+          <input type="password" id="log" placeholder="Inserisci la password"><br><br>
+          <button id="loginButton">ACCEDI</button>
+          <h4>Non sei iscritto? Clicca <a href="/registrazione.html" style="color: antiquewhite;">qui</a></h4>
+      </div>    
           
         </form>
       </div>
