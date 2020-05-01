@@ -10,9 +10,11 @@
             echo "Le password immesse non coincidono, riprova!";
         }
         else{
-            $dbconn = pg connect(”host=localhost port=5433 dbname=foodream user=pc password=”)
+            $dbconn = pg connect(”host=localhost port=5433 dbname=foodream user=pc password=foodream”)
                         or die(’ Could not connect : ’ . pg last error());
             $query = "insert into utente(nome,cognome,email,password) values (" . "$nome" . "," . "$cognome" . "," . "$email" . "," . "$password" . ")";
             pg query($query);
             echo 'Registrazione avvenuta con successo.';
         }
+
+?>
