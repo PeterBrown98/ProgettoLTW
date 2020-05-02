@@ -3,7 +3,7 @@
     <head></head>
     <body>
         <?php
-            $dbconn = pg_connect("host=localhost port=5433 dbname=prova user=postgres password=2Bistecche!")
+            $dbconn = pg_connect("host=localhost port=5433 dbname=dbfoodream user=postgres password=postgres")
             or die('Could not connect : ' . pg_last_error());
             
             if(!(isset($_POST["email"]))){header("Location: ../index.html");}
