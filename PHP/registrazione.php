@@ -16,9 +16,6 @@
             pg_query($query);
             echo 'Registrazione avvenuta con successo.';
         }
+     }
 
 ?>
-
-
-
-
