@@ -30,7 +30,7 @@
                         if($data){
                             echo "<h1> Registrazione completata clicca</h1> <a href=../login.html>qui</a> per effettuare il login";
                         }
-                        else echo "<h1>NON FUNZIONA UN CAZZO AMICI</h1>";
+                        else echo "<h1>NON FUNZIONA</h1>";
                     }
                 }
                
