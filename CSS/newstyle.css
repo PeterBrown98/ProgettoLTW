@@ -301,6 +301,7 @@ section[id="steps"]{
     display: inline-block;
     color: #000;
     position: static;
+    margin-bottom: 70px;
   }
   .accesso{
     font-size: 30px;
