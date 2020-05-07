@@ -44,6 +44,11 @@ body{
 
 /*---------------CAROSELLO-----------------*/
 
+h3{ 
+  text-align: center;
+  margin: 20px;
+
+}
 
 #carouselExampleIndicators1{
   color: white;
