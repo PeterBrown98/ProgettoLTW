@@ -2,6 +2,7 @@
     <head></head>
     <body>
         <?php
+            session_start();
             $dbconn = pg_connect("host=localhost port=5433 dbname=dbfoodream user=postgres password=postgres")
             or die('Could not connect : ' . pg_last_error());
             
@@ -20,11 +21,16 @@
                     $result= pg_query_params($dbconn, $q2, array($email, $password));
                     if(!($line=pg_fetch_array($result,null,PGSQL_ASSOC))){
                         echo "<h1> Password errata, </h1>
-                        <a href=login.html>riprova</a>";
+                        <a href=/login.html>riprova</a>";
                     }
                     else{
-                        $nome=$line['nome'];
-                        echo "<a href=/homeUtente.html?name=$nome>Premi qui</a> per utilizzare il sito.";
+                        
+                         $_SESSION['email'] = $line['email'];
+                        
+                        
+                        $email=$line['email'];
+                        echo "<a href=/homeUtente.php?email=$email>Premi qui</a> per utilizzare il sito.";
+                        
                     }
                 }
               

@@ -11,6 +11,20 @@
        
     </head>
     <body>
+
+      <?php
+        session_start();
+
+        if (isset( $_SESSION['email'] ) ) {
+            // Grab user data from the database using the user_id
+            // Let them access the "logged in only" pages
+        } else {
+            // Redirect them to the login page
+            session_destroy();
+            header("Location: ../index.html");
+        }
+      ?>
+
       <header>
       <nav class="navbar navbar-ficed-top navbar-expand-lg  navbar-dark " id="navbar">
           
@@ -25,7 +39,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="homeUtente.html">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="homeUtente.php">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="sceltaIngredienti.php" >Primi</a>
@@ -39,6 +53,13 @@
                 <li class="nav-item">
                   <a class="nav-link" >Dolci</a>
                 </li>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="logout.php">Logout</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="profilo.php">Profilo</a>
+                </li>
 
               </ul>
             </div>
@@ -51,8 +72,9 @@
           <div class="row" id="row1">
             <div class="col8">
               <h1 id="h1-home">
-                Primi eccellenti
+                Primi
               </h1>
+              <h3>Clicca <a href="primi.php"> qui </a> per accedere al sito</h3>
             </div>
             <div class="col4">
 
