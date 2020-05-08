@@ -52,38 +52,24 @@
         <main>
             <h1 class="title">Scegli gli ingredienti che vuoi usare</h1>
             <section class="ricerca">
-                <div class="frmSearch">
-                    <input type="text" id="search-box" placeholder="Scegli il primo ingrediente" name ="ingrediente1"/>
-                    <div id="suggesstion-box"></div>
-                </div>
-                <div class="frmSearch">
-                    <input type="text" id="search-box" placeholder="Scegli il secondo ingrediente" name ="ingrediente2"/>
-                    <div id="suggesstion-box"></div>
-                </div>
-                <div class="frmSearch">
-                    <input type="text" id="search-box" placeholder="Scegli il terzo ingrediente" name ="ingrediente3"/>
-                    <div id="suggesstion-box"></div>
-                </div>
-                <div class="frmSearch">
-                    <input type="text" id="search-box" placeholder="Scegli il quarto ingrediente" name ="ingrediente4"/>
-                    <div id="suggesstion-box"></div>
-                </div>
-                <div class="frmSearch">
-                    <input type="text" id="search-box" placeholder="Scegli il quinto ingrediente" name ="ingrediente5"/>
-                    <div id="suggesstion-box"></div>
-                </div>
-            </section>
-            <input class="awesomplete" list="mylist" placeholder = "Seleziona un ingrediente"/>
-            <datalist id="mylist">
-                <?php
-                    $db = pg-connect("host=localhost, port=5433, dbname=dbfoodream user=postgres password=postgres");
-                    $result1 = pg_query($db, "SELECT nome FROM ingrediente order by nome ASC");
-                    while ($row = pg_fetch_row($result1)) {
-                    echo "<option value='$row[0]'>$row[0]</option>";
-                    echo "<h1>ciao</h1>";
-                    }
-                ?>
-            </datalist>
+                <input class="awesomplete" list="mylist" placeholder = "Seleziona un ingrediente"/>
+                <br>
+                <input class="awesomplete" list="mylist" placeholder = "Seleziona un ingrediente"/>
+                <br>
+                <input class="awesomplete" list="mylist" placeholder = "Seleziona un ingrediente"/>
+                <br>
+                <input class="awesomplete" list="mylist" placeholder = "Seleziona un ingrediente"/>
+                <br>
+                <input class="awesomplete" list="mylist" placeholder = "Seleziona un ingrediente"/>
+                <datalist id="mylist">
+                                <?php
+                                    $db = pg-connect("host=localhost, port=5433, dbname=dbfoodream user=postgres password=postgres");
+                                    $result1 = pg_query($db, "SELECT nome FROM ingrediente order by nome ASC");
+                                    while ($row = pg_fetch_row($result1)) {
+                                    echo "<option value='$row[0]'>$row[0]</option>";
+                                    }
+                                ?>
+                </datalist>
         </main>
         <footer id="sticky-footer" class="py-4  text-white">
             <div class="container text-center">
