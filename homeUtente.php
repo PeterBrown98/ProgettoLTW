@@ -42,7 +42,7 @@
                   <a class="nav-link" href="homeUtente.php">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" >Primi</a>
+                  <a class="nav-link" href="sceltaIngredienti.php" >Primi</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" >Secondi</a>

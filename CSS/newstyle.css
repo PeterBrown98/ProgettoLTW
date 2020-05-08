@@ -422,3 +422,26 @@ hr{
   margin-left: auto;
   margin-right: auto; 
 }
+/*--------------Pagina ricerca ingredienti---------------*/
+
+
+.ricerca{
+  padding: 70px;
+  padding-left: 150px;
+  margin: auto;
+  width: 50%;
+  height: 50%;
+}
+
+.frmSearch{
+  padding-bottom: 30px;
+}
+
+
+.title{
+  padding-top: 50px;
+  margin: auto;
+  color: #fff;
+  width: 50%;
+  height: 50%;
+}

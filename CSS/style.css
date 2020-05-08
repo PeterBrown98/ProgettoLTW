@@ -1,11 +1,11 @@
 
 
 
-//strano
+/*strano*/
 .carousel {
   height: 400px;
 }
-//strano
+/*strano*/
 .carousel-item{
     color: white;
     height: 400px;
@@ -38,11 +38,11 @@ button{
 
 } 
 
-//PROBLEMATICO
+/*PROBLEMATICO*/
 html,body {
     height: 100%;
   }
- /DIVERSO
+ /*DIVERSO*/
 main{
 
   min-height: calc(100vh - 78px - 74px);
@@ -62,7 +62,7 @@ Footer
 Carosello
 -------------------------*/
 
-azione/accesso homepage
+/*azione/accesso homepage
 -------------------------*/
 
 
