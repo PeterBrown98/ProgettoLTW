@@ -5,9 +5,12 @@
         
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="CSS/newstyle.css">
+        <link rel="stylesheet" href="awesomplete.css" />
         <style type="text/css"></style>
         <meta name="viewport" content="width-device-width, initial-scale=1"/>
         <meta name="viewport" content="height=device-height, initial-scale=1"/> 
+        <script src="awesomplete.js" async></script>
+
     </head>
     <body>
         <header>
@@ -20,6 +23,8 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
+                
                 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
@@ -68,7 +73,15 @@
                     <div id="suggesstion-box"></div>
                 </div>
             </section>
-
+            <input class="awesomplete" list="mylist" />
+            <datalist id="mylist">
+                <?php
+                    $db = pg-connect("host=localhost, port=5433, dbname=dbfoodream user=postgres password=postgres");
+                    $result1 = pg_query($db, "SELECT nome FROM ingrediente order by nome ASC");
+                    while ($row = pg_fetch_row($result1)) {
+                    echo "<option value='$row[0]'>$row[0]</option>";
+                ?>
+            </datalist>
         </main>
         <footer id="sticky-footer" class="py-4  text-white">
             <div class="container text-center">
@@ -78,16 +91,6 @@
               <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
               <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
               <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-              <script type="text/javascript">
-                $(function() {
-                    
-                    //autocomplete
-                    $(".auto").autocomplete({
-                        source: "search.php",
-                        minLength: 1
-                    });                
-                
-                });
-                </script>
+              
     </body>
 </html>

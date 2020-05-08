@@ -1,16 +1,13 @@
 <?php
-define('DB_SERVER', 'localhost');
-define('DB_USER', 'postgres');
-define('DB_PASSWORD', 'postgres');
-define('DB_NAME', 'FOODREAM');
 
 
 if (isset($_GET['term'])){
     $return_arr = array();
 
     try {
-        $conn = new PDO("mysql:host=".DB_SERVER.";port=5433;dbname=".DB_NAME, DB_USER, DB_PASSWORD);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        session_start();
+        $dbconn = pg_connect("host=localhost port=5433 dbname=dbfoodream user=postgres password=postgres")
+        or die('Could not connect : ' . pg_last_error());
         
         $stmt = $conn->prepare('SELECT nome FROM ingrediente WHERE nome LIKE :term');
         $stmt->execute(array('term' => '%'.$_GET['term'].'%'));
