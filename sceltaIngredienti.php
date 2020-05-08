@@ -61,6 +61,9 @@
                 <input class="awesomplete" list="mylist" placeholder = "Seleziona un ingrediente"/>
                 <br>
                 <input class="awesomplete" list="mylist" placeholder = "Seleziona un ingrediente"/>
+                <br>
+                <br>
+                <br>
                 <datalist id="mylist">
                     <?php
                         $db = pg_connect("host=localhost, port=5433, dbname=dbfoodream user=postgres password=postgres");
@@ -70,6 +73,7 @@
                         }
                     ?>
                 </datalist>
+                <button class="btn-primary" id="srchbtn">Cerca Ricetta</button>
         </main>
         <footer id="sticky-footer" class="py-4  text-white">
             <div class="container text-center">
