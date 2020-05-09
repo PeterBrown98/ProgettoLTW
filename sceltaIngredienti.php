@@ -52,24 +52,30 @@
         <main>
             <h1 class="title">Scegli gli ingredienti che vuoi usare</h1>
             <section class="ricerca">
-                <input class="awesomplete" list="mylist" placeholder = "Seleziona un ingrediente"/>
+                <form action="/PHP/ricettePrimi.php" method="post"> 
+                <input class="awesomplete" name="i1" list="mylist" placeholder = "Seleziona un ingrediente"/>
                 <br>
-                <input class="awesomplete" list="mylist" placeholder = "Seleziona un ingrediente"/>
+                <input class="awesomplete" name="i2" list="mylist" placeholder = "Seleziona un ingrediente"/>
                 <br>
-                <input class="awesomplete" list="mylist" placeholder = "Seleziona un ingrediente"/>
+                <input class="awesomplete" name="i3" list="mylist" placeholder = "Seleziona un ingrediente"/>
                 <br>
-                <input class="awesomplete" list="mylist" placeholder = "Seleziona un ingrediente"/>
+                <input class="awesomplete" name="i4" list="mylist" placeholder = "Seleziona un ingrediente"/>
                 <br>
-                <input class="awesomplete" list="mylist" placeholder = "Seleziona un ingrediente"/>
+                <input class="awesomplete" name="i5" list="mylist" placeholder = "Seleziona un ingrediente"/>
+                <br>
+                <br>
+                <br>
                 <datalist id="mylist">
-                                <?php
-                                    $db = pg_connect("host=localhost, port=5433, dbname=dbfoodream user=postgres password=postgres");
-                                    $result1 = pg_query($db, "SELECT nome FROM ingrediente order by nome ASC");
-                                    while ($row = pg_fetch_row($result1)) {
-                                    echo "<option value='$row[0]'>$row[0]</option>";
-                                    }
-                                ?>
+                    <?php
+                        $db = pg_connect("host=localhost, port=5433, dbname=dbfoodream user=postgres password=postgres");
+                        $result1 = pg_query($db, "SELECT nome FROM ingrediente order by nome ASC");
+                        while ($row = pg_fetch_row($result1)) {
+                        echo "<option value='$row[0]'>$row[0]</option>";
+                        }
+                    ?>
                 </datalist>
+                <button type="submit" class="btn-primary" id="srchbtn" name="cerca">Cerca Ricetta</button>
+                </form>
         </main>
         <footer id="sticky-footer" class="py-4  text-white">
             <div class="container text-center">
