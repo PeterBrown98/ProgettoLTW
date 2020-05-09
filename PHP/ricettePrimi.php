@@ -18,7 +18,16 @@
             //verifica che $var sia un ingrediente in input
             function countInput($var,$a,$b,$c,$d,$e) {
                 $cont=0;
-                foreach($var as $value) if (($value==$a)||($value==$b)||($value==$c)||($value==$d)||($value==$e)) $cont++;
+                $i=0;
+                while($i<count($var)) {
+                    similar_text($var[$i],$a,$percent1);
+                    similar_text($var[$i],$b,$percent2);
+                    similar_text($var[$i],$c,$percent3);
+                    similar_text($var[$i],$d,$percent4);
+                    similar_text($var[$i],$e,$percent5);
+                    if (($percent1>=60)|| ($percent2>=60)||($percent3>=60)||($percent4>=60)||($percent5>=60)) $cont++;
+                    $i++;
+                }
                 return $cont;
             }
 
@@ -52,16 +61,12 @@
                         if ($a[4]!=$row[4]) array_push($a,$row[4]);
                         $row = pg_fetch_row($result);
                     }
+                    $num=countInput($a,$i1,$i2,$i3,$i4,$i5);
+                    array_push($a,$num);
                     array_push($res,$a);
                     $b=array($row[0],$row[1],$row[2],$row[3],$row[4]);
                 }
-                //conta il numero di ingredienti immessi in input che sono presenti nella ricetta assegnandoli come primo valore di ogni array in $res
-                foreach($res as $value){
-                    foreach($value as $val) {
-                        $val=countInput($value,$i1,$i2,$i3,$i4,$i5);
-                        break;
-                    }
-                }
+                
                 //ordina $res secondo cmp 
                 usort($res,"cmp");
 
