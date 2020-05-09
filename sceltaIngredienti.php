@@ -52,15 +52,16 @@
         <main>
             <h1 class="title">Scegli gli ingredienti che vuoi usare</h1>
             <section class="ricerca">
-                <input class="awesomplete" list="mylist" placeholder = "Seleziona un ingrediente"/>
+                <form action="/PHP/ricettePrimi.php" method="post"> 
+                <input class="awesomplete" name="i1" list="mylist" placeholder = "Seleziona un ingrediente"/>
                 <br>
-                <input class="awesomplete" list="mylist" placeholder = "Seleziona un ingrediente"/>
+                <input class="awesomplete" name="i2" list="mylist" placeholder = "Seleziona un ingrediente"/>
                 <br>
-                <input class="awesomplete" list="mylist" placeholder = "Seleziona un ingrediente"/>
+                <input class="awesomplete" name="i3" list="mylist" placeholder = "Seleziona un ingrediente"/>
                 <br>
-                <input class="awesomplete" list="mylist" placeholder = "Seleziona un ingrediente"/>
+                <input class="awesomplete" name="i4" list="mylist" placeholder = "Seleziona un ingrediente"/>
                 <br>
-                <input class="awesomplete" list="mylist" placeholder = "Seleziona un ingrediente"/>
+                <input class="awesomplete" name="i5" list="mylist" placeholder = "Seleziona un ingrediente"/>
                 <br>
                 <br>
                 <br>
@@ -73,7 +74,8 @@
                         }
                     ?>
                 </datalist>
-                <button class="btn-primary" id="srchbtn">Cerca Ricetta</button>
+                <button type="submit" class="btn-primary" id="srchbtn" name="cerca">Cerca Ricetta</button>
+                </form>
         </main>
         <footer id="sticky-footer" class="py-4  text-white">
             <div class="container text-center">
