@@ -45,30 +45,19 @@
                 if ($i4=="") $i4="nessun ingrediente selezionato";
                 $i5=$_POST['i5'];
                 if ($i5=="") $i5="nessun ingrediente selezionato";
-                $i6="Primo";
-                $query="select ric.*, ing.nome
-                        from ricetta ric, ingrediente ing
-                        where ric.id in (select ricetta from ricIng where ingrediente in 
-                                        (select id from ingrediente where nome like '$i1%' or nome like '$i2%'
-                                        or nome like '$i3%' or nome like '$i4%' or nome '$i5%')) and
-                        ing.id in (select ingrediente from  ricIng r where r.ricetta=ric.id) and ric.tipo=$i6 order by ric.id";
-                $result=pg_query_params($dbconn, $query);
-                $row=pg_fetch_row($result);
+                $query1="select nome from ingrediente where nome like '$i1%' or nome like '$i2%' or nome like '$i3%' or nome like '$i4%' or nome like '$i5%'";
+                $query="select * from ricetta where tipo = 'Primo'";
+                $ingredienti=pg_query($dbconn, $query1);
+                $result=pg_query($dbconn, $query);
                 $res=array();
-                $b=array();
-                //genera un array di array contenenti i campi di ogni ricetta e i relativi ingredienti in una sola riga
-                while($row = pg_fetch_row($result)){
-                    $id=$row[0];
-                    if(count($b)==0) $a=array($row[0],$row[1],$row[2],$row[3],$row[4]);
-                    else $a=$b;
-                    while(($row!=Null)&&($row[0]==$id)){
-                        if ($a[4]!=$row[4]) array_push($a,$row[4]);
-                        $row = pg_fetch_row($result);
+                
+                while(($row = pg_fetch_row($result))||(count($res)<30)){
+                    $cnt=0;
+                    while($row2 =pg_fetch_row($ingredienti)) if(strpos($row2,$row[4])!==false) $cnt++;
+                    if($cnt>0){
+                        array_push($row,$cnt);
+                        array_push($res,$row);
                     }
-                    $num=countInput($a,$i1,$i2,$i3,$i4,$i5);
-                    array_push($a,$num);
-                    array_push($res,$a);
-                    $b=array($row[0],$row[1],$row[2],$row[3],$row[4]);
                 }
                 
                 //ordina $res secondo cmp 
