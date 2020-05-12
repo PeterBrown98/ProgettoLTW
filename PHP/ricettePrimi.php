@@ -45,8 +45,8 @@
                 $query="select ric.*, ing.nome
                         from ricetta ric, ingrediente ing
                         where ric.id in (select ricetta from ricIng where ingrediente in 
-                                        (select id from ingrediente where nome = $1 or nome = $2
-                                        or nome = $3 or nome = $4 or nome = $5)) and
+                                        (select id from ingrediente where nome like $1% or nome like $2%
+                                        or nome like $3% or nome like $4% or nome $5%)) and
                         ing.id in (select ingrediente from  ricIng r where r.ricetta=ric.id) and ric.tipo=$6 order by ric.id";
                 $result=pg_query_params($dbconn, $query, array($i1,$i2,$i3,$i4,$i5,$i6));
                 $row=pg_fetch_row($result);
