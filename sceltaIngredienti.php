@@ -68,7 +68,7 @@
                 <datalist id="mylist">
                     <?php
                         $db = pg_connect("host=localhost, port=5433, dbname=dbfoodream user=postgres password=postgres");
-                        $result1 = pg_query($db, "SELECT nome FROM ingrediente order by nome ASC");
+                        $result1 = pg_query($db, "SELECT nome FROM ingrediente2 order by nome ASC");
                         while ($row = pg_fetch_row($result1)) {
                         echo "<option value='$row[0]'>$row[0]</option>";
                         }

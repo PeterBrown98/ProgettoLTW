@@ -38,17 +38,21 @@
             else{
                 $i1=$_POST['i1'];
                 $i2=$_POST['i2'];
+                if ($i2=="") $i2="nessun ingrediente selezionato";
                 $i3=$_POST['i3'];
+                if ($i3=="") $i3="nessun ingrediente selezionato";
                 $i4=$_POST['i4'];
+                if ($i4=="") $i4="nessun ingrediente selezionato";
                 $i5=$_POST['i5'];
+                if ($i5=="") $i5="nessun ingrediente selezionato";
                 $i6="Primo";
                 $query="select ric.*, ing.nome
                         from ricetta ric, ingrediente ing
                         where ric.id in (select ricetta from ricIng where ingrediente in 
-                                        (select id from ingrediente where nome like $1% or nome like $2%
-                                        or nome like $3% or nome like $4% or nome $5%)) and
-                        ing.id in (select ingrediente from  ricIng r where r.ricetta=ric.id) and ric.tipo=$6 order by ric.id";
-                $result=pg_query_params($dbconn, $query, array($i1,$i2,$i3,$i4,$i5,$i6));
+                                        (select id from ingrediente where nome like '$i1%' or nome like '$i2%'
+                                        or nome like '$i3%' or nome like '$i4%' or nome '$i5%')) and
+                        ing.id in (select ingrediente from  ricIng r where r.ricetta=ric.id) and ric.tipo=$i6 order by ric.id";
+                $result=pg_query_params($dbconn, $query);
                 $row=pg_fetch_row($result);
                 $res=array();
                 $b=array();
