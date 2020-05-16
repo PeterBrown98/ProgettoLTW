@@ -25,10 +25,35 @@
                         <a href=../registrazione.html>Riprova</a>";
                     }
                     else{
+
                         $q2="insert into utente values ($1, $2, $3, $4)";
                         $data= pg_query_params($dbconn, $q2, array($nome, $cognome, $email, $psw));
+
+
+                                                             
+                        $file_name="foodream.png";
+                        //$email=$_SESSION['email'];
+
+
+                        $img=fopen($file_name, 'r') or die("cannot read image\n");
+                        $data2= fread($img, filesize($file_name));
+
+                        $es_data = pg_escape_bytea($data2);
+                        fclose($img);
+                        //$query=    "update images set data = '$es_data' ";
+                        $query2 = "insert into images(email, data) values ('$email', '$es_data')";
+                        pg_query($dbconn, $query2);
+
+                       
+
                         if($data){
-                            echo "<h1> Registrazione completata clicca</h1> <a href=../login.html>qui</a> per effettuare il login";
+                            //echo "<h1> Registrazione completata clicca</h1> <a href=../login.html>qui</a> per effettuare il login";
+                            
+       
+                            header("Location: ../login.html");
+
+
+
                         }
                         else echo "<h1>NON FUNZIONA</h1>";
                     }

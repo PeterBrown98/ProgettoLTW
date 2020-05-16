@@ -337,6 +337,7 @@ section[id="steps"]{
   
   input{
     padding-left: 10px;
+    padding-right: 10px;
   }
   
   
@@ -417,11 +418,23 @@ hr{
 }
 
 #img-prof{
- 
+  color: #e6e6e6;
   display: block;
   margin-left: auto;
   margin-right: auto; 
+  text-align: center;
+  
 }
+#img-prof2{
+  color:black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
+  margin-top: 10px;
+  margin-bottom:10px; 
+  border-radius: 20px;
+}
+
 /*--------------Pagina ricerca ingredienti---------------*/
 
 

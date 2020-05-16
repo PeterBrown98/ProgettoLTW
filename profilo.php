@@ -57,6 +57,7 @@
             session_start();
 
             if (isset( $_SESSION['email'] ) ) {
+              
                 // Grab user data from the database using the user_id
                 // Let them access the "logged in only" pages
             } else {
@@ -64,7 +65,7 @@
                 session_destroy();
                 header("Location: ../index.html");
             }
-
+            
         $dbconn = pg_connect("host=localhost port=5433 dbname=dbfoodream user=postgres password=postgres")
         or die('Could not connect : ' . pg_last_error());
 
@@ -82,18 +83,21 @@
             $file_name=$email.".jpg";
             $img = fopen($file_name, 'wb') or die("cannot open image\n");
            
-            fwrite($img, $unes_image) or die ();
+            fwrite($img, $unes_image) ;
+         
+        
             fclose($img);
             pg_close($dbconn);
         
+           
         
         echo "<main id='main-profilo'>
           <div class='container' id='cont-profilo'>
             <div class='row'>
               <div class='col-md-6' id='col-p1'>
               
-                <img  src='$file_name' id='profile-image' class='center'> 
-              
+               
+              <img  src='$file_name' id='profile-image' class='center'> 
                
                 
               </div>
@@ -118,8 +122,9 @@
                  
                   <hr id='hrp'>
                   <form action='config.php' method='post' enctype='multipart/form-data'>
-                    <input id='profile_photo' type='file' name='profile_photo'>
-                    <input type='submit' name='insert' id='insert'>
+                    <input id='img-prof' type='file' name='profile_photo' value='File'>
+                    <br>
+                    <input type='submit' name='insert' id='img-prof2'>
                   </form>
               </div>
               
