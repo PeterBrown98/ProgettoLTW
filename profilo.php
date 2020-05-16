@@ -73,12 +73,26 @@
         $result= pg_query_params($dbconn, $q1, array($email));
         $line=pg_fetch_array($result,null,PGSQL_ASSOC);
 
+        $query2 = "select data from images where email='$email'";
+            $res= pg_query($dbconn, $query2) or die(pg_last_error($dbconn));
+
+            $data2= pg_fetch_result($res, 'data');
+            $unes_image = pg_unescape_bytea($data2);
+
+            $file_name=$email.".jpg";
+            $img = fopen($file_name, 'wb') or die("cannot open image\n");
+           
+            fwrite($img, $unes_image) or die ();
+            fclose($img);
+            pg_close($dbconn);
+        
+        
         echo "<main id='main-profilo'>
           <div class='container' id='cont-profilo'>
             <div class='row'>
               <div class='col-md-6' id='col-p1'>
               
-                <img  src='https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg' id='profile-image' class='center'> 
+                <img  src='$file_name' id='profile-image' class='center'> 
               
                
                 
@@ -103,8 +117,10 @@
                  
                  
                   <hr id='hrp'>
-                  <input id='img-prof' type='file' name='profile_photo'>
-                
+                  <form action='config.php' method='post' enctype='multipart/form-data'>
+                    <input id='profile_photo' type='file' name='profile_photo'>
+                    <input type='submit' name='insert' id='insert'>
+                  </form>
               </div>
               
 
