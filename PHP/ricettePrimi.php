@@ -82,7 +82,7 @@
                 foreach($res as $value){
                     $str="";
                     foreach($value as $val) $str= $str . "<td> $val </td>";
-                    echo "$str . </tr><tr>";
+                    echo "$str  </tr><tr>";
                 }
                 echo "</tr>";
                 echo "</table>";

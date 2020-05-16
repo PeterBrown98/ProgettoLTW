@@ -52,7 +52,7 @@
         <main>
             <h1 class="title">Scegli gli ingredienti che vuoi usare</h1>
             <section class="ricerca">
-                <form action="/PHP/ricettePrimi.php" method="post"> 
+                <form action="" method="post"> 
                 <input class="awesomplete" name="i1" list="mylist" placeholder = "Seleziona un ingrediente"/>
                 <br>
                 <input class="awesomplete" name="i2" list="mylist" placeholder = "Seleziona un ingrediente"/>
@@ -76,6 +76,28 @@
                 </datalist>
                 <button type="submit" class="btn-primary" id="srchbtn" name="cerca">Cerca Ricetta</button>
                 </form>
+
+
+                <div id="tabella"> Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullamco laboriosam, nisi ut aliquid ex ea commodi consequatur. Duis aute irure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.»</div>
+
+                <script>
+                    var bottone = document.getElementByTagName("button");
+                    bottone.onclick = caricaTabella;
+
+
+                    function caricaTabella(e){
+                        var req = new XMLHttpRequest();
+                        req.onreadystatechange = gestisciResponse;
+                        req.open("POST", PHP/ricettePrimi.php);
+                        req.send();
+                    }
+
+                    function gestisciResponse(e){
+                        if(e.target.readystate == 4 && e.target.status == 200){
+                            document.getElementeById("tabella").innerHTML = e.target.responseText;
+                        }
+                    }
+                </script>
         </main>
         <footer id="sticky-footer" class="py-4  text-white">
             <div class="container text-center">
