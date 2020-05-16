@@ -46,10 +46,7 @@
                 $i5=$_POST['i5'];
                 if ($i5=="") $i5="nessun ingrediente selezionato";
                 $i6='Primo';
-                //$query1="select nome from ingrediente where nome like '$i1%' or nome like '$i2%' or nome like '$i3%' or nome like '$i4%' or nome like '$i5%'";
                 $query="select * from ricetta where tipo = '$i6'";
-                
-                //$ingredienti=pg_query($dbconn, $query1);
                 $result=pg_query($dbconn, $query);
                 $res=array();
                 $ingr=array($i1, $i2, $i3, $i4, $i5);
@@ -82,7 +79,7 @@
                 foreach($res as $value){
                     $str="";
                     foreach($value as $val) $str= $str . "<td> $val </td>";
-                    echo "$str . </tr><tr>";
+                    echo "$str  </tr><tr>";
                 }
                 echo "</tr>";
                 echo "</table>";

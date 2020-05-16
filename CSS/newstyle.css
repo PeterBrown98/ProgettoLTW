@@ -427,8 +427,7 @@ hr{
 
 .ricerca{
   padding: 70px;
-  padding-left: 150px;
-  margin: auto;
+  margin-left: 25px;
   width: 50%;
   height: 50%;
 }
@@ -439,8 +438,8 @@ hr{
 
 
 .title{
+  margin-left: 10px;
   padding-top: 50px;
-  margin: auto;
   color: #fff;
   width: 50%;
   height: 50%;
