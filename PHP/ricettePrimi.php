@@ -68,8 +68,10 @@
 
 
                     if($cnt>0){
-                        array_push($row,$cnt);
-                     array_push($res,$row);
+                        $arr = array();
+                        $arr[0] = $row[1];
+                        $arr[1] = $cnt; 
+                     array_push($res,$arr);
                  }
                 }
                 
@@ -77,6 +79,9 @@
                 usort($res,"cmp");
 
                 //visualizza a schermo
+                if(count($res) == 0){
+                    echo "<h1> Nessuna ricetta trovata per gli ingredienti selezionati</h1>";
+                }else{
                 echo "<table>";
                 echo "<thead>";
                 echo "<tr>";
@@ -92,6 +97,7 @@
                 }
                 echo "</tr>";
                 echo "</table>";
+            }
             }
     ?>
 </body>
