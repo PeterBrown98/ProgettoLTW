@@ -470,3 +470,13 @@ hr{
   height: 100px;
   font-size: 30px;
 }
+
+
+/*--------------Risultati ricerca ricette---------------*/
+
+
+.risultati{
+  border: 3px;
+  border-radius: 45px 45px 45px 45px;
+  border-color: #000;
+}
