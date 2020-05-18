@@ -13,79 +13,82 @@
 
     </head>
     <body>
-        <header>
-            <nav class="navbar navbar-ficed-top navbar-expand-lg  navbar-dark " id="navbar">
+        <?php
+            $tipo=$_GET['tipoPiatto'];
+    
+       echo "<header>";
+           echo '<nav class="navbar navbar-ficed-top navbar-expand-lg  navbar-dark " id="navbar">';
                 
-                <a class="navbar-brand" href="#">
-                    <img src="IMMAGINI/foodream2.png" width="70" height="50" class="d-inline-block align-top" alt="">
-                </a>
+                echo '<a class="navbar-brand" href="#">';
+                  echo  '<img src="IMMAGINI/foodream2.png" width="70" height="50" class="d-inline-block align-top" alt="">';
+                echo "</a>";
                 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                echo '<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">';
+                    echo '<span class="navbar-toggler-icon"></span>';
+                echo "</button>";
 
                 
                 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="homeUtente.html">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link">Primi</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link">Secondi</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link">Contorni</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link">Dolci</a>
-                        </li>
-                    </ul>
-                </div>
+                echo '<div class="collapse navbar-collapse" id="navbarSupportedContent">';
+                    echo '<ul class="navbar-nav mr-auto">';
+                        echo '<li class="nav-item active">';
+                            echo '<a class="nav-link" href="homeUtente.php">Home <span class="sr-only">(current)</span></a>';
+                        echo "</li>";
+                        echo '<li class="nav-item">';
+                            echo '<a class="nav-link" href="sceltaIngredienti.php?tipoPiatto=Primo">Primi</a>';
+                        echo "</li>";
+                        echo '<li class="nav-item">';
+                            echo '<a class="nav-link" href="sceltaIngredienti.php?tipoPiatto=Secondo">Secondi</a>';
+                        echo "</li>";
+                        echo '<li class="nav-item">';
+                            echo '<a class="nav-link" href="sceltaIngredienti.php?tipoPiatto=Contorno">Contorni</a>';
+                        echo "</li>";
+                        echo '<li class="nav-item">';
+                            echo '<a class="nav-link" href="sceltaIngredienti.php?tipoPiatto=Dessert">Dolci</a>';
+                        echo "</li>";
+                    echo "</ul>";
+                echo "</div>";
             
-            </nav>
-        </header>
+            echo "</nav>";
+        echo "</header>";
              
-        <main>
-            <h1 class="title">Scegli gli ingredienti che vuoi usare</h1>
-            <section class="ricerca">
-                <form action="PHP/ricettePrimi.php" method="post"> 
-                <input class="awesomplete" name="i1" list="mylist" placeholder = "Seleziona un ingrediente"/>
-                <br>
-                <input class="awesomplete" name="i2" list="mylist" placeholder = "Seleziona un ingrediente"/>
-                <br>
-                <input class="awesomplete" name="i3" list="mylist" placeholder = "Seleziona un ingrediente"/>
-                <br>
-                <input class="awesomplete" name="i4" list="mylist" placeholder = "Seleziona un ingrediente"/>
-                <br>
-                <input class="awesomplete" name="i5" list="mylist" placeholder = "Seleziona un ingrediente"/>
-                <br>
-                <br>
-                <br>
-                <datalist id="mylist">
-                    <?php
+        echo "<main>";
+            echo '<h1 class="title">Scegli gli ingredienti che vuoi usare</h1>';
+            echo '<section class="ricerca">';
+                echo "<form action='PHP/ricette.php?tipoPiatto=$tipo'method='post'>";
+                echo '<input class="awesomplete" name="i1" list="mylist" placeholder = "Seleziona un ingrediente"/>';
+                echo "<br>";
+                echo '<input class="awesomplete" name="i2" list="mylist" placeholder = "Seleziona un ingrediente"/>';
+                echo "<br>";
+                echo '<input class="awesomplete" name="i3" list="mylist" placeholder = "Seleziona un ingrediente"/>';
+                echo "<br>";
+                echo '<input class="awesomplete" name="i4" list="mylist" placeholder = "Seleziona un ingrediente"/>';
+                echo "<br>";
+                echo '<input class="awesomplete" name="i5" list="mylist" placeholder = "Seleziona un ingrediente"/>';
+                echo "<br>";
+                echo "<br>";
+                echo "<br>";
+                echo '<datalist id="mylist">';
+                    
                         $db = pg_connect("host=localhost, port=5433, dbname=dbfoodream user=postgres password=postgres");
                         $result1 = pg_query($db, "SELECT nome FROM ingrediente2 order by nome ASC");
                         while ($row = pg_fetch_row($result1)) {
                         echo "<option value='$row[0]'>$row[0]</option>";
                         }
-                    ?>
-                </datalist>
-                <button type="submit" class="btn-primary" id="srchbtn" name="cerca">Cerca Ricetta</button>
-                </form>
+                    
+                        echo "</datalist>";
+                        echo '<button type="submit" class="btn-primary" id="srchbtn" name="cerca">Cerca Ricetta</button>';
+                        echo "</form>";
 
 
-                <div id="tabella"> Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullamco laboriosam, nisi ut aliquid ex ea commodi consequatur. Duis aute irure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.»</div>
+                        echo '<div id="tabella"> Lorem ipsum dolor sit amet, consectetur adipisci elit, sed do eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullamco laboriosam, nisi ut aliquid ex ea commodi consequatur. Duis aute irure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.»</div>';
 
-                <script>
+                    echo '<script>;
                     $(document).ready(function () {
                         $("button").click(function () {
                             $.ajax({
-                                type: 'POST',
-                                url: 'ricettaPrimi.php', //compare this line with yours
+                                type: "POST",
+                                url: "ricette.php", //compare this line with yours
                                 data: {handover : 1},
                                 success: function (data) {
                                     $("#tabella").html(data); // and look at this line
@@ -93,16 +96,16 @@
                             });
                         });
                     });
-                </script>
-        </main>
-        <footer id="sticky-footer" class="py-4  text-white">
-            <div class="container text-center">
-             Copyright &copy;<script>document.write(new Date().getFullYear());</script>,  Foodream
-            </div>
-          </footer>
-              <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-              <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-              <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-              
+                    </script>';
+        echo " </main>";
+        echo '<footer id="sticky-footer" class="py-4  text-white">';
+        echo '<div class="container text-center">';
+        echo 'Copyright &copy;<script>document.write(new Date().getFullYear());</script>,  Foodream';
+        echo "</div>";
+        echo "</footer>";
+        echo '<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>';
+        echo '<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>';
+        echo '<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>';
+     ?>         
     </body>
 </html>

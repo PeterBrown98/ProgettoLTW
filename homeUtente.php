@@ -42,16 +42,16 @@
                   <a class="nav-link" href="homeUtente.php">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="sceltaIngredienti.php" >Primi</a>
+                  <a class="nav-link" href="sceltaIngredienti.php?tipoPiatto=Primo" >Primi</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" >Secondi</a>
+                  <a class="nav-link" href="sceltaIngredienti.php?tipoPiatto=Secondo">Secondi</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" >Contorni</a>
+                  <a class="nav-link" href="sceltaIngredienti.php?tipoPiatto=Contorno">Contorni</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" >Dolci</a>
+                  <a class="nav-link" href="sceltaIngredienti.php?tipoPiatto=Dessert">Dolci</a>
                 </li>
                 </li>
                 <li class="nav-item">
