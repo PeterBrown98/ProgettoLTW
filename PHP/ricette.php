@@ -125,7 +125,7 @@
                                 $arr[0] = $row[1];
                                 $arr[1] = $cnt;
                                 $arr[2] = substr($contenuti, 0, -2);
-                                $arr[3] = "<button type=submit class=btn-primary id=gotoRecipe><a href=/paginaRicetta.php?nome=$arr[0] id=redir>Vai alla ricetta</a></button>";
+                                $arr[3] = "<button type=submit class=btn-primary id=gotoRecipe><a href=/paginaRicetta.php?nome=$arr[0] id=redir>$arr[0]</a></button>";
                             array_push($res,$arr);
                             }
                         }
@@ -143,7 +143,7 @@
                         echo "<th class='valore text-center'>Ricetta</th>";
                         echo "<th class='valore text-center'>Quantità di ingredienti tra quelli cercati</th>";
                         echo "<th class='valore text-center'>Ingredientingredienti tra quelli cercati</th>";
-                        echo "<th class='valore text-center'>Vai alla ricetta</th>";
+                        echo "<th class='valore text-center'></th>";
                         echo "</tr>";
                         echo "<tr>";
                         foreach($res as $value){
