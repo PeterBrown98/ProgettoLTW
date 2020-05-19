@@ -72,9 +72,7 @@
           <div class="row" id="row1">
             <div class="col8">
               <h1 id="h1-home">
-                Primi
-              </h1>
-              <h3>Clicca <a href="sceltaIngredienti.php"> qui </a> per accedere al sito</h3>
+              <a href="sceltaIngredienti.php?tipoPiatto=Primo">Primi</a>
             </div>
             <div class="col4">
 
@@ -111,7 +109,7 @@
           <div class="row" id="row1">
             <div class="col8">
               <h1 id="h1-home">
-              Secondi
+              <a href="sceltaIngredienti.php?tipoPiatto=Primo">Secondi</a>
               </h1>
             </div>
             <div class="col4">
@@ -149,7 +147,7 @@
           <div class="row" id="row1">
             <div class="col8">
               <h1 id="h1-home">
-               Contorni
+              <a href="sceltaIngredienti.php?tipoPiatto=Primo">Contorni</a>
               </h1>
             </div>
             <div class="col4">
@@ -188,7 +186,7 @@
           <div class="row" id="row1">
             <div class="col8">
               <h1 id="h1-home">
-                Dolci
+              <a href="sceltaIngredienti.php?tipoPiatto=Primo">Dolci</a>
               </h1>
             </div>
             <div class="col4">
