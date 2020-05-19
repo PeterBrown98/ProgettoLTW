@@ -74,7 +74,7 @@
               <h1 id="h1-home">
                 Primi
               </h1>
-              <h3>Clicca <a href="primi.php"> qui </a> per accedere al sito</h3>
+              <h3>Clicca <a href="sceltaIngredienti.php"> qui </a> per accedere al sito</h3>
             </div>
             <div class="col4">
 
