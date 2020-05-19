@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <title>Risultati ricerca</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="CSS/newstyle.css">
+        <link rel="stylesheet" href="/CSS/newstyle.css">
         <style type="text/css"></style>
         <meta name="viewport" content="width-device-width, initial-scale=1"/>
         <meta name="viewport" content="height=device-height, initial-scale=1"/>  
@@ -29,7 +29,7 @@
       <nav class="navbar navbar-ficed-top navbar-expand-lg  navbar-dark " id="navbar">
           
             <a class="navbar-brand" href="#">
-              <img src="IMMAGINI/foodream2.png" width="70" height="50" class="d-inline-block align-top" alt="">
+              <img src="/IMMAGINI/foodream2.png" width="70" height="50" class="d-inline-block align-top" alt="">
             </a>
              
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -76,21 +76,6 @@
                         return ($a[count($a)-1]<$b[count($b)-1]) ? 1 : -1;
                     }
 
-                    //verifica che $var sia un ingrediente in input
-                    function countInput($var,$a,$b,$c,$d,$e) {
-                        $cont=0;
-                        $i=0;
-                        while($i<count($var)) {
-                            similar_text($var[$i],$a,$percent1);
-                            similar_text($var[$i],$b,$percent2);
-                            similar_text($var[$i],$c,$percent3);
-                            similar_text($var[$i],$d,$percent4);
-                            similar_text($var[$i],$e,$percent5);
-                            if (($percent1>=60)|| ($percent2>=60)||($percent3>=60)||($percent4>=60)||($percent5>=60)) $cont++;
-                            $i++;
-                        }
-                        return $cont;
-                    }
 
                     $dbconn = pg_connect("host=localhost port=5433 dbname=dbfoodream user=postgres password=postgres")
                     or die('Could not connect : ' . pg_last_error());
@@ -106,11 +91,8 @@
                         if ($i4=="") $i4="nessun ingrediente selezionato";
                         $i5=$_POST['i5'];
                         if ($i5=="") $i5="nessun ingrediente selezionato";
-                        $i6='Primo';
-                        //$query1="select nome from ingrediente where nome like '$i1%' or nome like '$i2%' or nome like '$i3%' or nome like '$i4%' or nome like '$i5%'";
+                        $i6=$_GET['tipoPiatto'];
                         $query="select * from ricetta where tipo = '$i6'";
-                        
-                        //$ingredienti=pg_query($dbconn, $query1);
                         $result=pg_query($dbconn, $query);
                         $res=array();
                         $ingr=array($i1, $i2, $i3, $i4, $i5);
