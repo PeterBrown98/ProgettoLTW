@@ -141,9 +141,11 @@
           
             <div class='row'> 
               
-            <table class=risultati> ";
+            <table class=risultati> 
+              <thead>
+              <tr>  ";
                 while(($row = pg_fetch_row($respref))){
-                  echo " <tr> 
+                  echo " <tr class='text-center' id='preferiti'> 
                    <td  class= elemento> $row[0] </td>
                     <td  class= elemento> $row[1] </td> 
                     <td  class= elemento> $row[2] </td>
@@ -153,7 +155,8 @@
    
    
    
-             echo "</table>   
+             echo "
+             </tr>     </table>   
                  </div> 
              </div>
           </div>
