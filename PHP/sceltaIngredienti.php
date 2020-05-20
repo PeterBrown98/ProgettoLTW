@@ -20,7 +20,7 @@
            echo '<nav class="navbar navbar-ficed-top navbar-expand-lg  navbar-dark " id="navbar">';
                 
                 echo '<a class="navbar-brand" href="#">';
-                  echo  '<img src="IMMAGINI/foodream2.png" width="70" height="50" class="d-inline-block align-top" alt="">';
+                  echo  '<img src="../IMMAGINI/foodream2.png" width="70" height="50" class="d-inline-block align-top" alt="">';
                 echo "</a>";
                 
                 echo '<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">';
