@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <title>Risultati ricerca</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/CSS/newstyle.css">
+        <link rel="stylesheet" href="../CSS/newstyle.css">
         <style type="text/css"></style>
         <meta name="viewport" content="width-device-width, initial-scale=1"/>
         <meta name="viewport" content="height=device-height, initial-scale=1"/>  
@@ -29,7 +29,7 @@
       <nav class="navbar navbar-ficed-top navbar-expand-lg  navbar-dark " id="navbar">
           
             <a class="navbar-brand" href="#">
-              <img src="IMMAGINI/foodream2.png" width="70" height="50" class="d-inline-block align-top" alt="">
+              <img src="../IMMAGINI/foodream2.png" width="70" height="50" class="d-inline-block align-top" alt="">
             </a>
              
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -125,7 +125,7 @@
                                 $arr[1] = $cnt;
                                 $arr[2] = substr($contenuti, 0, -2);
                                 $b = str_replace(" ", "-", $arr[0]);
-                                $arr[3] = "<button type=submit class=btn-primary id=gotoRecipe><a href=/paginaRicetta.php?nome='$b' id=redir>$arr[0]</a></button>";
+                                $arr[3] = "<button type=submit class=btn-primary id=gotoRecipe><a href=paginaRicetta.php?nome='$b' id=redir>$arr[0]</a></button>";
                             array_push($res,$arr);
                             }
                         }

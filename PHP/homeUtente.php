@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <title>Home Utente</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="CSS/newstyle.css">
+        <link rel="stylesheet" href="../CSS/newstyle.css">
         <style type="text/css"></style>
         <meta name="viewport" content="width-device-width, initial-scale=1"/>
         <meta name="viewport" content="height=device-height, initial-scale=1"/>  
@@ -29,7 +29,7 @@
       <nav class="navbar navbar-ficed-top navbar-expand-lg  navbar-dark " id="navbar">
           
             <a class="navbar-brand" href="#">
-              <img src="IMMAGINI/foodream2.png" width="70" height="50" class="d-inline-block align-top" alt="">
+              <img src="../IMMAGINI/foodream2.png" width="70" height="50" class="d-inline-block align-top" alt="">
             </a>
              
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,16 +42,16 @@
                   <a class="nav-link" href="homeUtente.php">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="sceltaIngredienti.php?tipoPiatto=Primo" >Primi</a>
+                  <a class="nav-link" href="/sceltaIngredienti.php?tipoPiatto=Primo" >Primi</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="sceltaIngredienti.php?tipoPiatto=Secondo">Secondi</a>
+                  <a class="nav-link" href="/sceltaIngredienti.php?tipoPiatto=Secondo">Secondi</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="sceltaIngredienti.php?tipoPiatto=Contorno">Contorni</a>
+                  <a class="nav-link" href="/sceltaIngredienti.php?tipoPiatto=Contorno">Contorni</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="sceltaIngredienti.php?tipoPiatto=Dessert">Dolci</a>
+                  <a class="nav-link" href="/sceltaIngredienti.php?tipoPiatto=Dessert">Dolci</a>
                 </li>
                 </li>
                 <li class="nav-item">

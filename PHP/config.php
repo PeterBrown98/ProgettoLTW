@@ -12,7 +12,7 @@
         }
 
 
-        if(!(isset($_POST["insert"]))){header("Location: ../profilo.php");}
+        if(!(isset($_POST["insert"]))){header("Location: profilo.php");}
         else{
 
             $dbconn = pg_connect("host=localhost port=5433 dbname=dbfoodream user=postgres password=postgres")
@@ -32,7 +32,7 @@
             pg_query($dbconn, $query);
 
             pg_close($dbconn);
-            header("Location: ../profilo.php");
+            header("Location: profilo.php");
 
 
 

@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <title>Home Utente</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="CSS/newstyle.css">
+        <link rel="stylesheet" href="../CSS/newstyle.css">
         <style type="text/css"></style>
         <meta name="viewport" content="width-device-width, initial-scale=1"/>
         <meta name="viewport" content="height=device-height, initial-scale=1"/>  

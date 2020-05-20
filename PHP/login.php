@@ -30,7 +30,7 @@
                         
                         $email=$line['email'];
                         /*echo "<a href=/homeUtente.php?email=$email>Premi qui</a> per utilizzare il sito.";*/
-                        echo '<script> window.location.href="../homeUtente.php";</script>';
+                        echo '<script> window.location.href="homeUtente.php";</script>';
 
                     }
                 }

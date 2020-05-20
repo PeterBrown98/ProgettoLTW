@@ -4,7 +4,7 @@
         <title>Scelta ingredienti</title>
         
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="CSS/newstyle.css">
+        <link rel="stylesheet" href="../CSS/newstyle.css">
         <link rel="stylesheet" href="awesomplete.css" />
         <style type="text/css"></style>
         <meta name="viewport" content="width-device-width, initial-scale=1"/>
@@ -61,7 +61,7 @@
         echo "<main>";
             echo '<h1 class="title">Scegli gli ingredienti che vuoi usare</h1>';
             echo '<section class="ricerca">';
-                echo "<form action='PHP/ricette.php?tipoPiatto=$tipo'method='post'>";
+                echo "<form action='ricette.php?tipoPiatto=$tipo'method='post'>";
                 echo '<input class="awesomplete" name="i1" list="mylist" placeholder = "Seleziona un ingrediente"/>';
                 echo "<br>";
                 echo '<input class="awesomplete" name="i2" list="mylist" placeholder = "Seleziona un ingrediente"/>';

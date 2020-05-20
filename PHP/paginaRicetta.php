@@ -2,76 +2,86 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>
+        
         <?php
-            session_start();
-            $dbconn = pg_connect("host=localhost port=5433 dbname=dbfoodream user=postgres password=postgres")
-            or die('Could not connect : ' . pg_last_error());
-
-            $q1="select * from ricetta where nome=$1";
-            $result= pg_query_params($dbconn, $q1, array($name));
-            $line=pg_fetch_array($result,null,PGSQL_ASSOC);
-
-            echo ".$line[nome]";
+            
+            $nome = $_GET['nome'];
+            $nome = str_replace("-", " ", $nome);
+            echo "<title>'$nome'</title>";
+            
         ?>
-        </title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="CSS/newstyle.css">
+        <link rel="stylesheet" href="../CSS/newstyle.css">
         <style type="text/css"></style>
         <meta name="viewport" content="width-device-width, initial-scale=1"/>
         <meta name="viewport" content="height=device-height, initial-scale=1"/>  
        
     </head>
-    <body id="body-profilo">
+    
+    <?php
+        session_start();
+
+        if (isset( $_SESSION['email'] ) ) {
+            // Grab user data from the database using the user_id
+            // Let them access the "logged in only" pages
+        } else {
+            // Redirect them to the login page
+            session_destroy();
+            header("Location: ../index.html");
+        }
+      ?>
+
       <header>
-        <nav class="navbar navbar-ficed-top navbar-expand-lg  navbar-dark " id="navbar">
-            
-              <a class="navbar-brand" href="#">
-                <img src="IMMAGINI/foodream2.png" width="70" height="50" class="d-inline-block align-top" alt="">
-              </a>
-               
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="homeUtente.php">Home <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" >Primi</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" >Secondi</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" >Contorni</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" >Dolci</a>
-                  </li>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="logout.php">Logout</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="profilo.php">Profilo</a>
-                  </li>
-  
-                </ul>
-              </div>
-           
-          </nav>
-        </header>
+      <nav class="navbar navbar-ficed-top navbar-expand-lg  navbar-dark " id="navbar">
+          
+            <a class="navbar-brand" href="#">
+              <img src="../IMMAGINI/foodream2.png" width="70" height="50" class="d-inline-block align-top" alt="">
+            </a>
+             
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="homeUtente.php">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="sceltaIngredienti.php?tipoPiatto=Primo" >Primi</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="sceltaIngredienti.php?tipoPiatto=Secondo">Secondi</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="sceltaIngredienti.php?tipoPiatto=Contorno">Contorni</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="sceltaIngredienti.php?tipoPiatto=Dessert">Dolci</a>
+                </li>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../logout.php">Logout</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../profilo.php">Profilo</a>
+                </li>
 
+              </ul>
+            </div>
+         
+        </nav>
+      </header>
+    <main>
 
-
-        <?php
-
-
-
-        ?>
+        
+    
+    
+    
+    
+    
+    
+    </main>
 
 
 
