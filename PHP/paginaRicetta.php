@@ -12,6 +12,7 @@
         ?>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="../CSS/newstyle.css">
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
         <style type="text/css"></style>
         <meta name="viewport" content="width-device-width, initial-scale=1"/>
         <meta name="viewport" content="height=device-height, initial-scale=1"/>  
@@ -73,6 +74,29 @@
         </nav>
       </header>
     <main>
+
+    <?php
+            
+            $nome = $_GET['nome'];
+            $nome = str_replace("-", " ", $nome);
+            
+            echo "<label for='id-of-input' class='custom-checkbox'>
+            <span class='text-center'>$nome</span>
+            <input type='checkbox' id='id-of-input'/>
+            <i class='glyphicon glyphicon-star-empty'></i>
+            <i class='glyphicon glyphicon-star'></i>
+            </label>";
+            
+            
+            echo "<section class= 'ingredienti'>";
+              echo "<h2 class='ingTitle'> Ingredienti </section>";
+
+            $db = pg_connect("host=localhost, port=5433, dbname=dbfoodream user=postgres password=postgres");
+            $result = pg_query($db, "select distinct id, descrizione, ingredienti from ricetta where nome = $nome");
+            $ricetta = pg_fetch_row($result);
+        
+    ?>
+        
 
         
     

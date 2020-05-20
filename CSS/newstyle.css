@@ -486,7 +486,6 @@ hr{
 .risultati{
   border: 3px;
   border-radius: 45px 45px 45px 45px;
-  border-color: red;
   background-color: #fff;
   margin-left: 30px;
   margin-top: 30px;
@@ -526,3 +525,51 @@ th{
   padding-bottom: 20px;
 }
 
+
+
+
+
+
+/*--------------Pagina ricetta---------------*/
+
+label {
+  /* Presentation */
+  font-size: 48px
+}
+
+/* Required Styling */
+
+label input[type="checkbox"] {
+  display: none;
+}
+
+.custom-checkbox {
+  margin-left: 2em;
+  position: relative;
+  cursor: pointer;
+}
+
+.custom-checkbox .glyphicon {
+  color: gold;
+  position: absolute;
+  top: 0.4em;
+  left: -1.25em;
+  font-size: 0.75em;
+}
+
+.custom-checkbox .glyphicon-star-empty {
+  color: gray;
+}
+
+.custom-checkbox .glyphicon-star {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.custom-checkbox:hover .glyphicon-star{
+  opacity: 0.5;
+}
+
+.custom-checkbox input[type="checkbox"]:checked ~ .glyphicon-star {
+  opacity: 1;
+}
