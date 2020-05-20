@@ -12,10 +12,10 @@
         ?>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="../CSS/newstyle.css">
-        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
         <style type="text/css"></style>
         <meta name="viewport" content="width-device-width, initial-scale=1"/>
-        <meta name="viewport" content="height=device-height, initial-scale=1"/>  
+        <meta name="viewport" content="height=device-height, initial-scale=1"/>
        
     </head>
     
@@ -74,7 +74,7 @@
         </nav>
       </header>
     <main class="ricetta">
-
+       
     <?php
             
             $nome = $_GET['nome'];
@@ -82,12 +82,7 @@
             
             echo 
             "<div class='nomeRicetta text-center'>
-            <label for='id-of-input' class='custom-checkbox'>
             <span class='recipeName'>$nome</span>
-            <input type='checkbox' id='id-of-input'/>
-            <i class='glyphicon glyphicon-star-empty'></i>
-            <i class='glyphicon glyphicon-star'></i>
-            </label>
             </div>";
             
             
