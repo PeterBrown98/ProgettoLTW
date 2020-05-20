@@ -600,3 +600,7 @@ label input[type="checkbox"] {
 .recipeName{
   font-size: 80px;
 }
+
+.nomeRicetta{
+  padding-top: 30px;
+}

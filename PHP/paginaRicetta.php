@@ -81,7 +81,7 @@
             $nome = str_replace("-", " ", $nome);
             
             echo 
-            "<div class='text-center'>
+            "<div class='nomeRicetta text-center'>
             <label for='id-of-input' class='custom-checkbox'>
             <span class='recipeName'>$nome</span>
             <input type='checkbox' id='id-of-input'/>
@@ -103,6 +103,7 @@
             echo "<ul class='ingredients'>";
             foreach($ingredienti as $ingrediente){
               if($ingrediente !==""){
+              $ingrediente = str_replace("Di ", "", $ingrediente);
               echo "<li class='ingrediente'> $ingrediente </li>"; 
               }
             }
