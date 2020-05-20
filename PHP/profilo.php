@@ -74,6 +74,10 @@
         $result= pg_query_params($dbconn, $q1, array($email));
         $line=pg_fetch_array($result,null,PGSQL_ASSOC);
 
+        $pref="select * from utente";
+        $respref=pg_query($dbconn, $pref);
+
+
         $query2 = "select data from images where email='$email'";
             $res= pg_query($dbconn, $query2) or die(pg_last_error($dbconn));
 
@@ -134,7 +138,24 @@
 
 
 
-            </div>
+          
+            <div class='row'> 
+              
+            <table class=risultati> ";
+                while(($row = pg_fetch_row($respref))){
+                  echo " <tr> 
+                   <td  class= elemento> $row[0] </td>
+                    <td  class= elemento> $row[1] </td> 
+                    <td  class= elemento> $row[2] </td>
+                  </tr> ";
+
+              }
+   
+   
+   
+             echo "</table>   
+                 </div> 
+             </div>
           </div>
           
         </main>"
