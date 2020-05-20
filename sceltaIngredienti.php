@@ -46,6 +46,12 @@
                         echo '<li class="nav-item">';
                             echo '<a class="nav-link" href="sceltaIngredienti.php?tipoPiatto=Dessert">Dolci</a>';
                         echo "</li>";
+                        echo '<li class="nav-item">';
+                            echo '<a class="nav-link" href="logout.php">Logout</a>';
+                        echo '</li>';
+                        echo '<li class="nav-item">';
+                            echo '<a class="nav-link" href="profilo.php">Profilo</a>';
+                        echo '</li>';
                     echo "</ul>";
                 echo "</div>";
             

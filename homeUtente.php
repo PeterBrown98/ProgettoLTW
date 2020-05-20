@@ -109,7 +109,7 @@
           <div class="row" id="row1">
             <div class="col8">
               <h1 id="h1-home">
-              <a href="sceltaIngredienti.php?tipoPiatto=Primo">Secondi</a>
+              <a href="sceltaIngredienti.php?tipoPiatto=Secondo">Secondi</a>
               </h1>
             </div>
             <div class="col4">
@@ -147,7 +147,7 @@
           <div class="row" id="row1">
             <div class="col8">
               <h1 id="h1-home">
-              <a href="sceltaIngredienti.php?tipoPiatto=Primo">Contorni</a>
+              <a href="sceltaIngredienti.php?tipoPiatto=Contorno">Contorni</a>
               </h1>
             </div>
             <div class="col4">
@@ -186,7 +186,7 @@
           <div class="row" id="row1">
             <div class="col8">
               <h1 id="h1-home">
-              <a href="sceltaIngredienti.php?tipoPiatto=Primo">Dolci</a>
+              <a href="sceltaIngredienti.php?tipoPiatto=Dessert">Dolci</a>
               </h1>
             </div>
             <div class="col4">
