@@ -12,7 +12,7 @@
     </head>
     <body>
 
-      <?php
+    <?php
         session_start();
 
         if (isset( $_SESSION['email'] ) ) {
@@ -29,7 +29,7 @@
       <nav class="navbar navbar-ficed-top navbar-expand-lg  navbar-dark " id="navbar">
           
             <a class="navbar-brand" href="#">
-              <img src="/IMMAGINI/foodream2.png" width="70" height="50" class="d-inline-block align-top" alt="">
+              <img src="IMMAGINI/foodream2.png" width="70" height="50" class="d-inline-block align-top" alt="">
             </a>
              
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,7 +66,6 @@
          
         </nav>
       </header>
-       
     <main>
         
     <?php
