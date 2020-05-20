@@ -125,7 +125,7 @@
                                 $arr[1] = $cnt;
                                 $arr[2] = substr($contenuti, 0, -2);
                                 $b = str_replace(" ", "-", $arr[0]);
-                                $arr[3] = "<button type=submit class=btn-primary id=gotoRecipe><a href=paginaRicetta.php?nome='$b' id=redir>$arr[0]</a></button>";
+                                $arr[3] = "<button type=submit class=btn-primary id=gotoRecipe><a href=paginaRicetta.php?nome=$b id=redir>$arr[0]</a></button>";
                             array_push($res,$arr);
                             }
                         }

@@ -7,7 +7,7 @@
             
             $nome = $_GET['nome'];
             $nome = str_replace("-", " ", $nome);
-            echo "<title>'$nome'</title>";
+            echo "<title>$nome</title>";
             
         ?>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
