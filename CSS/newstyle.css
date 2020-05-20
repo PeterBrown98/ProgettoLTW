@@ -578,3 +578,34 @@ label input[type="checkbox"] {
 .custom-checkbox input[type="checkbox"]:checked ~ .glyphicon-star {
   opacity: 1;
 }
+
+
+.ricetta{
+  color: #fff;
+}
+
+
+.recipeTitle{
+  font-size: 50px;
+  font-family: 'Lobster', cursive;
+}
+
+
+.ingredienti, .procedimento, .ingredients{
+  padding-left: 30px;
+}
+
+
+
+.ingrediente, .procedura{
+  font-size: 30px;
+}
+
+
+.recipeName{
+  font-size: 80px;
+}
+
+.nomeRicetta{
+  padding-top: 30px;
+}
