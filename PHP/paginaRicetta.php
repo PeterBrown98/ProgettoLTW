@@ -89,18 +89,34 @@
            $nome = str_replace("-", " ", $nome);
     
            echo 
-            "<div class='nomeRicetta text-center'>
-            
-            
-            <span class='recipeName'>$nome</span>
+            "<div class='nomeRicetta text-center'><span class='recipeName'>$nome</span>
             <div class='checkbox-container'>
-            <label class='checkbox-label'>
-            <input type='checkbox'>
-            <span class='checkbox-custom rectangular'></span>
+            <label class='checkbox-label' for'my-checkbox'>
+            <input type='checkbox' id='my-checkbox' onclick='ChangeCheckboxLabel(this)'>
+            <span id='my-checkbox-checked' class='checkbox-custom rectangular' style='display:none;'><p class='ckbx'>Rimuovi dai preferiti</p></span>
+            <span id='my-checkbox-unchecked' class='checkbox-custom rectangular style='display:inline;'><p class='ckbx'>Aggiungi ai preferiti</p></span>
             </label>
-            <div class='input-title'>Aggiungi ai preferiti</div>
+
+
+            <script>
             
-        
+            function ChangeCheckboxLabel(ckbx)
+            {
+               var d = ckbx.id;
+               if( ckbx.checked )
+               {
+                  document.getElementById(d+'-checked').style.display = 'inline-block';
+                  document.getElementById(d+'-unchecked').style.display = 'none';
+               }
+               else
+               {
+                  document.getElementById(d+'-checked').style.display = 'none';
+                  document.getElementById(d+'-unchecked').style.display = 'inline-block';
+               }
+            }
+            </script>
+            
+            
             </div>";
            
            
