@@ -43,24 +43,12 @@
                   <a class="nav-link" href="homeUtente.php">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="sceltaIngredienti.php?tipoPiatto=Primo" >Primi</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="sceltaIngredienti.php?tipoPiatto=Secondo">Secondi</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="sceltaIngredienti.php?tipoPiatto=Contorno">Contorni</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="sceltaIngredienti.php?tipoPiatto=Dessert">Dolci</a>
-                </li>
+                  <a class="nav-link" href="../profilo.php">Profilo</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="javascript: logout()">Logout</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../profilo.php">Profilo</a>
-                </li>
+                
 
               </ul>
             </div>
@@ -138,7 +126,7 @@
 
                         //visualizza a schermo
                         if(count($res) == 0){
-                            echo "<h1> Nessuna ricetta trovata per gli ingredienti selezionati</h1>";
+                            echo "<h1 style= 'color:white'> Nessuna ricetta trovata per gli ingredienti selezionati</h1>";
                         }else{
                         echo "<table class='risultati'>";
                         echo "<thead>";
@@ -156,14 +144,15 @@
                         }
                         echo "</tr>";
                         echo "</table>";
-                      }
-                    }
-
-                    echo"<script type='text/javascript'>
+                        echo"<script type='text/javascript'>
                             document.getElementById('gotoRecipe').onclick = function () {
                                 location.href = 'paginaRicetta.php?nome=$b';
                             };
                         </script>";
+                      }
+                    }
+
+                    
                 ?>
     </main>
       

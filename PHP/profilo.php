@@ -25,28 +25,16 @@
             
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                  <li class="nav-item active">
+                  <li class="nav-item">
                     <a class="nav-link" href="homeUtente.php">Home </a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="sceltaIngredienti.php?tipoPiatto=Primo">Primi</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="sceltaIngredienti.php?tipoPiatto=Secondo">Secondi</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="sceltaIngredienti.php?tipoPiatto=Contorno">Contorni</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="sceltaIngredienti.php?tipoPiatto=Dessert">Dolci</a>
-                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="profilo.php">Profilo<span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="javascript: logout()">Logout</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="profilo.php">Profilo<span class="sr-only">(current)</span></a>
-                  </li>
+                  
   
                 </ul>
               </div>
@@ -158,7 +146,7 @@
                   $b = str_replace(" ", "-", $row[1]);
                   echo " <tr class='text-center' id='preferiti'> 
 
-                   <td  class= elemento> <a href=../PHP/paginaRicetta.php?nome=$b>$row[1]</a> </td>
+                   <td  class= elemento> <a href=../PHP/paginaRicetta.php?nome=$b style='color: black;'>$row[1]</a> </td>
                    
                     <td  class= elemento> $row[2] </td> 
                     <td class= elemento><input id='btnpref' class='btn-danger' type='button' value='Elimina da preferiti' 

@@ -567,7 +567,7 @@ th{
 
 .recipeTitle{
   font-size: 50px;
-  
+  padding-top:50px;
 }
 
 
@@ -585,12 +585,17 @@ th{
 .recipeName{
   font-size: 80px;
   display: inline;
+  
 }
 
 .nomeRicetta{
-  padding-top: 30px;
+  padding-top: 10px;
 }
 
+
+.procedura{
+  margin-bottom: 80px;
+}
 
 
 .input-title {
