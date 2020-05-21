@@ -90,7 +90,7 @@
             <input type='checkbox'>
             <span class='checkbox-custom rectangular'></span>
             </label>
-            <div class='input-title'>Rectangular</div>
+            <div class='input-title'>Aggiungi ai preferiti</div>
             <span class='recipeName'>$nome</span>
         
             </div>";
