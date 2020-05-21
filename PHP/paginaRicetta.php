@@ -10,15 +10,14 @@
             echo "<title>$nome</title>";
             
         ?>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link rel="stylesheet" href="../CSS/newstyle.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
         <style type="text/css"></style>
         <meta name="viewport" content="width-device-width, initial-scale=1"/>
         <meta name="viewport" content="height=device-height, initial-scale=1"/>
         <script src="../javascript/logout.js"></script>
-        <script type="text/javascript" src="../javascript/like.js"></script>
-       
+      
     </head>
     
     <?php
@@ -76,27 +75,48 @@
         </nav>
       </header>
     <main class="ricetta">
+   
 
     <?php
+            $db = pg_connect("host=localhost, port=5433, dbname=dbfoodream user=postgres password=postgres");
+            $result = pg_query($db, "select distinct id, descrizione, ingredienti from ricetta where nome = '$nome'");
            
-            
-           if(array_key_exists('test',$_POST)){
-              testfun();
-           }
-           
-           
+            $ricetta = pg_fetch_row($result);
+            $id = $ricetta[0];
+            $email= $_SESSION['email'];
+
+            $querCheck="select ricetta from utric where utente='$email' and ricetta='$id'";
+            $checkres=pg_query($db, $querCheck);
+            $x=true;
+            if(pg_num_rows($checkres)==0){
+              $x=false;
+            }
            $nome = $_GET['nome'];
            $nome = str_replace("-", " ", $nome);
     
            echo 
             "<div class='nomeRicetta text-center'><span class='recipeName'>$nome</span>
             <div class='checkbox-container'>
-            <label class='checkbox-label' for'my-checkbox'>
-            <input type='checkbox' id='my-checkbox' onclick='ChangeCheckboxLabel(this)'>
-            <span id='my-checkbox-checked' class='checkbox-custom rectangular' style='display:none;'><p class='ckbx'>Rimuovi dai preferiti</p></span>
-            <span id='my-checkbox-unchecked' class='checkbox-custom rectangular style='display:inline;'><p class='ckbx'>Aggiungi ai preferiti</p></span>
-            </label>
+            ";
+            
+            if(!$x){
+              echo "<label class='checkbox-label' for'my-checkbox'>
+              <input type='checkbox' id='my-checkbox' onclick='ChangeCheckboxLabel(this)'> 
+              <span id='my-checkbox-checked' class='checkbox-custom rectangular' style='display:none;'><p class='ckbx'>Rimuovi dai preferiti</p></span>
+              <span id='my-checkbox-unchecked' class='checkbox-custom rectangular' style='display:inline;' ><p class='ckbx'>Aggiungi ai preferiti</p></span>
+              </label>";
+  
+            }
+            else {
+              echo "<label class='checkbox-label' for'my-checkbox'>
+              <input type='checkbox' id='my-checkbox' onclick='ChangeCheckboxLabel(this)' checked>
+               <span id='my-checkbox-checked' class='checkbox-custom rectangular' style='display:inline;'><p class='ckbx'>Rimuovi dai preferiti</p></span>
+              <span id='my-checkbox-unchecked' class='checkbox-custom rectangular' style='display:none;'><p class='ckbx'>Aggiungi ai preferiti</p></span>
+              </label>";
+  
+            }
 
+          echo"
 
             <script>
             
@@ -105,15 +125,46 @@
                var d = ckbx.id;
                if( ckbx.checked )
                {
-                  document.getElementById(d+'-checked').style.display = 'inline-block';
+
+                  document.getElementById(d+'-checked').style.display = 'inline';
                   document.getElementById(d+'-unchecked').style.display = 'none';
+                  salva('$nome', '$email');
                }
                else
                {
+
                   document.getElementById(d+'-checked').style.display = 'none';
-                  document.getElementById(d+'-unchecked').style.display = 'inline-block';
+                  document.getElementById(d+'-unchecked').style.display = 'inline';
+                  elimina('$nome');
                }
             }
+
+            function salva(nome, email){
+              $.ajax({
+                url: 'salvaPref.php',
+                type: 'GET',
+                data: {
+                  nome: nome,
+                  email: email
+                 
+                },
+                success: function() {
+                }
+              });
+            }
+            function elimina(nome){
+              $.ajax({
+                url: 'eliminaPref.php',
+                type: 'GET',
+                data: {
+                  nome: nome
+                },
+                success: function() {
+                }
+              });
+            }
+
+
             </script>
             
             
@@ -123,11 +174,8 @@
            echo "<section class= 'ingredienti'>";
              echo "<h2 class='recipeTitle'> <u>Ingredienti</u> </h2></section>";
 
-           $db = pg_connect("host=localhost, port=5433, dbname=dbfoodream user=postgres password=postgres");
-           $result = pg_query($db, "select distinct id, descrizione, ingredienti from ricetta where nome = '$nome'");
-           
-           $ricetta = pg_fetch_row($result);
-           $id = $ricetta[0];
+          
+       
            
            $ingredienti = explode('\t',$ricetta[2]);
            foreach($ingredienti as $ingrediente){
@@ -146,22 +194,22 @@
            echo"</section>";
           
 
-           function testfun()
-           {
-             $nome = $_GET['nome'];
-             $nome = str_replace("-", " ", $nome);
+          //  function testfun()
+          //  {
+          //    $nome = $_GET['nome'];
+          //    $nome = str_replace("-", " ", $nome);
       
-             $dbs = pg_connect("host=localhost, port=5433, dbname=dbfoodream user=postgres password=postgres");
+          //    $dbs = pg_connect("host=localhost, port=5433, dbname=dbfoodream user=postgres password=postgres");
              
-             $email= $_SESSION['email'];
+          //    $email= $_SESSION['email'];
             
              
-              $queryNome="select * from ricetta where nome = '$nome'";
-              $salva=pg_query($dbs, $queryNome);
-              $ricetta = pg_fetch_row($salva);
-               $querypref="insert into utric(utente, ricetta) values ('$email', '$ricetta[0]')";
-             $salvaImmg=pg_query($dbs, $querypref);
-           }
+          //     $queryNome="select * from ricetta where nome = '$nome'";
+          //     $salva=pg_query($dbs, $queryNome);
+          //     $ricetta = pg_fetch_row($salva);
+          //      $querypref="insert into utric(utente, ricetta) values ('$email', '$ricetta[0]')";
+          //    $salvaImmg=pg_query($dbs, $querypref);
+          //  }
          
        
    ?>
@@ -182,12 +230,9 @@
   
         
 
-          <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-          <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-          <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-          <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-          <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-          <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+      <script  src="https://code.jquery.com/jquery-3.5.1.min.js"  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="  crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+         
     </body>
 </html>
