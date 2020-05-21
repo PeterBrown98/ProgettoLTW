@@ -185,10 +185,10 @@
             if(confirm("Sei sicuro di voler eliminare la ricetta dai preferiti?")){
                 var p=o.parentNode.parentNode;
                 
-                var nome= p.firstChild.innerText;
+                var nome= p.firstElementChild.innerText;
                
                 
-               window.location.href="eliminaPref.php?Nome=" +nome;
+                window.location.href="eliminaPref.php?nome=" +nome;
                 p.parentNode.removeChild(p);
                
             }

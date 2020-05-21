@@ -76,6 +76,9 @@
         </nav>
       </header>
     <main class="ricetta">
+    <form method="post">
+        <input type="submit" name="test" id="test" value="RUN" /><br/>
+    </form>
 
     <?php
            
