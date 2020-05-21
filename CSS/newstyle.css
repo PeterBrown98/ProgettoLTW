@@ -270,6 +270,16 @@ section[id="steps"]{
 	transition-delay: 0.9s;
 }
 
+
+.tipo{
+  color: black;
+}
+
+.tipo:hover{
+  color: grey;
+  text-shadow: 3px 3px black;
+}
+
 /*-------------------------------*/
 
 
@@ -561,3 +571,4 @@ th{
 .nomeRicetta{
   padding-top: 30px;
 }
+

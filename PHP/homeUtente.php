@@ -42,23 +42,23 @@
                   <a class="nav-link" href="homeUtente.php">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/sceltaIngredienti.php?tipoPiatto=Primo" >Primi</a>
+                  <a class="nav-link" href="../PHP/sceltaIngredienti.php?tipoPiatto=Primo" >Primi</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/sceltaIngredienti.php?tipoPiatto=Secondo">Secondi</a>
+                  <a class="nav-link" href="../PHP/sceltaIngredienti.php?tipoPiatto=Secondo">Secondi</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/sceltaIngredienti.php?tipoPiatto=Contorno">Contorni</a>
+                  <a class="nav-link" href="../PHP/sceltaIngredienti.php?tipoPiatto=Contorno">Contorni</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/sceltaIngredienti.php?tipoPiatto=Dessert">Dolci</a>
+                  <a class="nav-link" href="../PHP/sceltaIngredienti.php?tipoPiatto=Dessert">Dolci</a>
                 </li>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="logout.php">Logout</a>
+                  <a class="nav-link" href="../PHP/logout.php">Logout</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="profilo.php">Profilo</a>
+                  <a class="nav-link" href="../PHP/profilo.php">Profilo</a>
                 </li>
 
               </ul>
@@ -72,7 +72,7 @@
           <div class="row" id="row1">
             <div class="col8">
               <h1 id="h1-home">
-              <a href="sceltaIngredienti.php?tipoPiatto=Primo">Primi</a>
+              <a class="tipo" href="sceltaIngredienti.php?tipoPiatto=Primo">Primi</a>
             </div>
             <div class="col4">
 
@@ -109,7 +109,7 @@
           <div class="row" id="row1">
             <div class="col8">
               <h1 id="h1-home">
-              <a href="sceltaIngredienti.php?tipoPiatto=Secondo">Secondi</a>
+              <a class="tipo" href="sceltaIngredienti.php?tipoPiatto=Secondo">Secondi</a>
               </h1>
             </div>
             <div class="col4">
@@ -147,7 +147,7 @@
           <div class="row" id="row1">
             <div class="col8">
               <h1 id="h1-home">
-              <a href="sceltaIngredienti.php?tipoPiatto=Contorno">Contorni</a>
+              <a class="tipo" href="sceltaIngredienti.php?tipoPiatto=Contorno">Contorni</a>
               </h1>
             </div>
             <div class="col4">
@@ -186,7 +186,7 @@
           <div class="row" id="row1">
             <div class="col8">
               <h1 id="h1-home">
-              <a href="sceltaIngredienti.php?tipoPiatto=Dessert">Dolci</a>
+              <a class="tipo" href="sceltaIngredienti.php?tipoPiatto=Dessert">Dolci</a>
               </h1>
             </div>
             <div class="col4">

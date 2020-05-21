@@ -16,6 +16,7 @@
         <style type="text/css"></style>
         <meta name="viewport" content="width-device-width, initial-scale=1"/>
         <meta name="viewport" content="height=device-height, initial-scale=1"/>
+        <script type="text/javascript" src="../javascript/like.js"></script>
        
     </head>
     
