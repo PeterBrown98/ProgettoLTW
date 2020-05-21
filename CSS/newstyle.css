@@ -102,20 +102,6 @@ h3{
 
 }
 
-/*
-.carousel-item{
-      color: white;
-      height: 400px;
-  }
-
-  .caroselloContainer{
-    height: 200px;
-    width: 100%;
-    margin: 0 auto;
-    z-index: 0.5;
-    position: relative;
-  }
-*/
 
 #control-prevnext{
     z-index: 1;
@@ -579,7 +565,7 @@ th{
 
 .recipeTitle{
   font-size: 50px;
-  padding-top: 80px;
+  
 }
 
 
@@ -734,4 +720,21 @@ border-radius: 0;
   -ms-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
 }
-.checkbox-container{display: inline-block;}
+
+
+.checkbox-container{
+  display: inline-block;
+}
+
+
+#my-checkbox{
+  padding-right: 60px;
+  margin-right: 60px;
+}
+
+.ckbx{
+  font-size: xlarge;
+  padding-left: 30px;
+  display: inline-block;
+  white-space: nowrap;
+}
