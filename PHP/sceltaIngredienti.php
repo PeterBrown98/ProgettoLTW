@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Scelta ingredienti</title>
-        
+        <script src="../javascript/logout.js"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="../CSS/newstyle.css">
         <link rel="stylesheet" href="awesomplete.css" />
@@ -47,7 +47,7 @@
                             echo '<a class="nav-link" href="sceltaIngredienti.php?tipoPiatto=Dessert">Dolci</a>';
                         echo "</li>";
                         echo '<li class="nav-item">';
-                            echo '<a class="nav-link" href="logout.php">Logout</a>';
+                            echo '<a class="nav-link" href="javascript: logout()">Logout</a>';
                         echo '</li>';
                         echo '<li class="nav-item">';
                             echo '<a class="nav-link" href="profilo.php">Profilo</a>';

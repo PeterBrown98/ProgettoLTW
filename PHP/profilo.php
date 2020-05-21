@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+      <script src="../javascript/logout.js"></script>
         <meta charset="utf-8">
         <title>Home Utente</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -41,7 +42,7 @@
                   </li>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="logout.php">Logout</a>
+                    <a class="nav-link" href="javascript: logout()">Logout</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="profilo.php">Profilo</a>
@@ -154,8 +155,11 @@
               </tr>
               <tr>  ";
                 while(($row = pg_fetch_row($respref))){
+                  $b = str_replace(" ", "-", $row[1]);
                   echo " <tr class='text-center' id='preferiti'> 
-                   <td  class= elemento> $row[1] </td>
+
+                   <td  class= elemento> <a href=../PHP/paginaRicetta.php?nome=$b>$row[1]</a> </td>
+                   
                     <td  class= elemento> $row[2] </td> 
                     <td class= elemento><input id='btnpref' class='btn-danger' type='button' value='Elimina da preferiti' 
                     onclick='elimina(this)'> </td>

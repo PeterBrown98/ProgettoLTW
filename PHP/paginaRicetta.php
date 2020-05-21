@@ -16,6 +16,7 @@
         <style type="text/css"></style>
         <meta name="viewport" content="width-device-width, initial-scale=1"/>
         <meta name="viewport" content="height=device-height, initial-scale=1"/>
+        <script src="../javascript/logout.js"></script>
         <script type="text/javascript" src="../javascript/like.js"></script>
        
     </head>
@@ -63,7 +64,7 @@
                 </li>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="logout.php">Logout</a>
+                  <a class="nav-link" href="javascript: logout()">Logout</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="profilo.php">Profilo</a>
@@ -75,9 +76,6 @@
         </nav>
       </header>
     <main class="ricetta">
-    <form method="post">
-        <input type="submit" name="test" id="test" value="RUN" /><br/>
-    </form>
 
     <?php
            
@@ -91,15 +89,35 @@
            $nome = str_replace("-", " ", $nome);
     
            echo 
-           "<div class='nomeRicetta text-center'>
-           <label for='id-of-input' class='custom-checkbox'>
-           <span class='recipeName'>$nome</span>
-           
-           <input type='checkbox' id='id-of-input'/>
-           <i class='glyphicon glyphicon-star-empty'></i>
-           <i class='glyphicon glyphicon-star'></i>
-           </label>
-           </div>";
+            "<div class='nomeRicetta text-center'><span class='recipeName'>$nome</span>
+            <div class='checkbox-container'>
+            <label class='checkbox-label' for'my-checkbox'>
+            <input type='checkbox' id='my-checkbox' onclick='ChangeCheckboxLabel(this)'>
+            <span id='my-checkbox-checked' class='checkbox-custom rectangular' style='display:none;'><p class='ckbx'>Rimuovi dai preferiti</p></span>
+            <span id='my-checkbox-unchecked' class='checkbox-custom rectangular style='display:inline;'><p class='ckbx'>Aggiungi ai preferiti</p></span>
+            </label>
+
+
+            <script>
+            
+            function ChangeCheckboxLabel(ckbx)
+            {
+               var d = ckbx.id;
+               if( ckbx.checked )
+               {
+                  document.getElementById(d+'-checked').style.display = 'inline-block';
+                  document.getElementById(d+'-unchecked').style.display = 'none';
+               }
+               else
+               {
+                  document.getElementById(d+'-checked').style.display = 'none';
+                  document.getElementById(d+'-unchecked').style.display = 'inline-block';
+               }
+            }
+            </script>
+            
+            
+            </div>";
            
            
            echo "<section class= 'ingredienti'>";
@@ -112,14 +130,12 @@
            $id = $ricetta[0];
            
            $ingredienti = explode('\t',$ricetta[2]);
-           echo "<ul class='ingredients'>";
            foreach($ingredienti as $ingrediente){
              if($ingrediente !==""){
              $ingrediente = str_replace("Di ", "", $ingrediente);
              echo "<li class='ingrediente'> $ingrediente </li>"; 
              }
            }
-           echo"</ul>";
            echo"</section>";
 
 
@@ -143,25 +159,12 @@
               $queryNome="select * from ricetta where nome = '$nome'";
               $salva=pg_query($dbs, $queryNome);
               $ricetta = pg_fetch_row($salva);
-              echo "$ricetta[0]";
                $querypref="insert into utric(utente, ricetta) values ('$email', '$ricetta[0]')";
              $salvaImmg=pg_query($dbs, $querypref);
            }
          
        
    ?>
-       
-
-       
-   
-   
-   
-   
-   
-    
-    
-    
-    
     
     
     </main>
