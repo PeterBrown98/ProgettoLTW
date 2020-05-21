@@ -579,7 +579,7 @@ th{
 
 .recipeTitle{
   font-size: 50px;
-  
+  padding-top: 80px;
 }
 
 
@@ -596,6 +596,7 @@ th{
 
 .recipeName{
   font-size: 80px;
+  display: inline;
 }
 
 .nomeRicetta{
@@ -733,3 +734,4 @@ border-radius: 0;
   -ms-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
 }
+.checkbox-container{display: inline-block;}

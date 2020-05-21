@@ -154,8 +154,11 @@
               </tr>
               <tr>  ";
                 while(($row = pg_fetch_row($respref))){
+                  $b = str_replace(" ", "-", $row[1]);
                   echo " <tr class='text-center' id='preferiti'> 
-                   <td  class= elemento> $row[1] </td>
+
+                   <td  class= elemento> <a href=../PHP/paginaRicetta.php?nome=$b>$row[1]</a> </td>
+                   
                     <td  class= elemento> $row[2] </td> 
                     <td  class= elemento> Bottone </td>
                   </tr> ";
