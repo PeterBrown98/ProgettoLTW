@@ -84,7 +84,7 @@
             $data2= pg_fetch_result($res, 'data');
             $unes_image = pg_unescape_bytea($data2);
 
-            $file_name=$email.".jpg";
+            $file_name="UpdateImmagini/".$email.".jpg";
             $img = fopen($file_name, 'wb') or die("cannot open image\n");
            
             fwrite($img, $unes_image) ;
@@ -141,9 +141,9 @@
           
             <div class='row'> 
               
-            <table class=risultati2>
+            <table class='risultati2' id='tabprefer'>
               <tr>
-                <td colspan='3' class='text-center' id='preftitle'> Lista ricette</td>
+                <td colspan='3' class='text-center' id='preftitle'> Preferiti</td>
               </tr> 
              
               <tr>
@@ -157,19 +157,15 @@
                   echo " <tr class='text-center' id='preferiti'> 
                    <td  class= elemento> $row[1] </td>
                     <td  class= elemento> $row[2] </td> 
-                    <td  class= elemento> Bottone </td>
+                    <td class= elemento><input id='btnpref' class='btn-danger' type='button' value='Elimina da preferiti' 
+                    onclick='elimina(this)'> </td>
                   </tr> ";
-
               }
-   
-   
-   
              echo "
              </tr>     </table>   
                  </div> 
              </div>
-          </div>
-          
+          </div>          
         </main>"
        ?>
 
@@ -178,10 +174,26 @@
          Copyright &copy;<script>document.write(new Date().getFullYear());</script>,  Foodream
         </div>
       </footer>
-    
-  
-        
-        
+
+            <script>
+              
+          function elimina(o) {
+            if(confirm("Sei sicuro di voler eliminare la ricetta dai preferiti?")){
+                var p=o.parentNode.parentNode;
+                
+                var nome= p.firstChild.innerText;
+               
+                
+               window.location.href="eliminaPref.php?Nome=" +nome;
+                p.parentNode.removeChild(p);
+               
+            }
+          }
+
+
+          
+          </script>
+
           <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
           <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
           <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>

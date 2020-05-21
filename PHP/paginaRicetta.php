@@ -128,7 +128,7 @@
            echo"<span class='procedura'>$ricetta[1]</span>"; 
            
            echo"</section>";
-           echo "$id";
+          
 
            function testfun()
            {
