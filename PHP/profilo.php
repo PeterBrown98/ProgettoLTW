@@ -74,7 +74,6 @@
         $result= pg_query_params($dbconn, $q1, array($email));
         $line=pg_fetch_array($result,null,PGSQL_ASSOC);
 
-
         $pref="select * from ricetta where id in(select ricetta from utRic where utente='$email')";
         $respref=pg_query($dbconn, $pref);
 

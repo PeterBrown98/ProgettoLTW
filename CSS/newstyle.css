@@ -270,6 +270,16 @@ section[id="steps"]{
 	transition-delay: 0.9s;
 }
 
+
+.tipo{
+  color: black;
+}
+
+.tipo:hover{
+  color: grey;
+  text-shadow: 3px 3px black;
+}
+
 /*-------------------------------*/
 
 
@@ -562,49 +572,6 @@ th{
 
 /*--------------Pagina ricetta---------------*/
 
-label {
-  /* Presentation */
-  font-size: 48px
-}
-
-/* Required Styling */
-
-label input[type="checkbox"] {
-  display: none;
-}
-
-.custom-checkbox {
-  margin-left: 2em;
-  position: relative;
-  cursor: pointer;
-}
-
-.custom-checkbox .glyphicon {
-  color: gold;
-  position: absolute;
-  top: 0.4em;
-  left: -1.25em;
-  font-size: 0.75em;
-}
-
-.custom-checkbox .glyphicon-star-empty {
-  color: gray;
-}
-
-.custom-checkbox .glyphicon-star {
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
-}
-
-.custom-checkbox:hover .glyphicon-star{
-  opacity: 0.5;
-}
-
-.custom-checkbox input[type="checkbox"]:checked ~ .glyphicon-star {
-  opacity: 1;
-}
-
-
 .ricetta{
   color: #fff;
 }
@@ -612,7 +579,7 @@ label input[type="checkbox"] {
 
 .recipeTitle{
   font-size: 50px;
-  font-family: 'Lobster', cursive;
+  
 }
 
 
@@ -634,3 +601,4 @@ label input[type="checkbox"] {
 .nomeRicetta{
   padding-top: 30px;
 }
+

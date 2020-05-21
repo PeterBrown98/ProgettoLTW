@@ -12,10 +12,11 @@
         ?>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="../CSS/newstyle.css">
-        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
         <style type="text/css"></style>
         <meta name="viewport" content="width-device-width, initial-scale=1"/>
-        <meta name="viewport" content="height=device-height, initial-scale=1"/>  
+        <meta name="viewport" content="height=device-height, initial-scale=1"/>
+        <script type="text/javascript" src="../javascript/like.js"></script>
        
     </head>
     
