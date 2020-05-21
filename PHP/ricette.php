@@ -43,9 +43,6 @@
                   <a class="nav-link" href="homeUtente.php">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="../profilo.php">Profilo</a>
-                </li>
-                <li class="nav-item">
                   <a class="nav-link" href="javascript: logout()">Logout</a>
                 </li>
                 
@@ -114,7 +111,7 @@
                                 $arr[1] = $cnt;
                                 $arr[2] = substr($contenuti, 0, -2);
                                 $b = str_replace(" ", "-", $arr[0]);
-                                $arr[3] = "<button type=submit class=btn-primary id=gotoRecipe>$arr[0]</a></button>";
+                                $arr[3] = "<a href=paginaRicetta.php?nome=$b id=redir><button type=submit class=btn-primary id=gotoRecipe>$arr[0]</button></a>";
                             array_push($res,$arr);
                             }
                         }
@@ -144,16 +141,13 @@
                         }
                         echo "</tr>";
                         echo "</table>";
-                        echo"<script type='text/javascript'>
-                            document.getElementById('gotoRecipe').onclick = function () {
-                                location.href = 'paginaRicetta.php?nome=$b';
-                            };
-                        </script>";
+                        
                       }
                     }
 
                     
                 ?>
+              
     </main>
       
       
