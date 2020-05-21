@@ -83,7 +83,16 @@
             
             echo 
             "<div class='nomeRicetta text-center'>
+            
+            
+            <div class='checkbox-container'>
+            <label class='checkbox-label'>
+            <input type='checkbox'>
+            <span class='checkbox-custom rectangular'></span>
+            </label>
+            <div class='input-title'>Rectangular</div>
             <span class='recipeName'>$nome</span>
+        
             </div>";
             
             
