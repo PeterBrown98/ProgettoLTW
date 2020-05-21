@@ -305,7 +305,6 @@ section[id="steps"]{
   }
   
   #log{
-    border-radius: 35px;
     width: 250px;
     height: 35px;
   }
@@ -319,7 +318,6 @@ section[id="steps"]{
   #loginButton{
     width: 130px;
     font-size: large;
-    border-radius: 50px 50px 50px 50px;
     margin-bottom: 20px;
   }
   
