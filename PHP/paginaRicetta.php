@@ -74,54 +74,89 @@
         </nav>
       </header>
     <main class="ricetta">
+    <form method="post">
+        <input type="submit" name="test" id="test" value="RUN" /><br/>
+    </form>
 
     <?php
+           
             
-            $nome = $_GET['nome'];
-            $nome = str_replace("-", " ", $nome);
-            
-            echo 
-            "<div class='nomeRicetta text-center'>
-            <label for='id-of-input' class='custom-checkbox'>
-            <span class='recipeName'>$nome</span>
-            <input type='checkbox' id='id-of-input'/>
-            <i class='glyphicon glyphicon-star-empty'></i>
-            <i class='glyphicon glyphicon-star'></i>
-            </label>
-            </div>";
-            
-            
-            echo "<section class= 'ingredienti'>";
-              echo "<h2 class='recipeTitle'> <u>Ingredienti</u> </h2></section>";
+           if(array_key_exists('test',$_POST)){
+              testfun();
+           }
+           
+           
+           $nome = $_GET['nome'];
+           $nome = str_replace("-", " ", $nome);
+    
+           echo 
+           "<div class='nomeRicetta text-center'>
+           <label for='id-of-input' class='custom-checkbox'>
+           <span class='recipeName'>$nome</span>
+           
+           <input type='checkbox' id='id-of-input'/>
+           <i class='glyphicon glyphicon-star-empty'></i>
+           <i class='glyphicon glyphicon-star'></i>
+           </label>
+           </div>";
+           
+           
+           echo "<section class= 'ingredienti'>";
+             echo "<h2 class='recipeTitle'> <u>Ingredienti</u> </h2></section>";
 
-            $db = pg_connect("host=localhost, port=5433, dbname=dbfoodream user=postgres password=postgres");
-            $result = pg_query($db, "select distinct id, descrizione, ingredienti from ricetta where nome = '$nome'");
+           $db = pg_connect("host=localhost, port=5433, dbname=dbfoodream user=postgres password=postgres");
+           $result = pg_query($db, "select distinct id, descrizione, ingredienti from ricetta where nome = '$nome'");
+           
+           $ricetta = pg_fetch_row($result);
+           $id = $ricetta[0];
+           
+           $ingredienti = explode('\t',$ricetta[2]);
+           echo "<ul class='ingredients'>";
+           foreach($ingredienti as $ingrediente){
+             if($ingrediente !==""){
+             $ingrediente = str_replace("Di ", "", $ingrediente);
+             echo "<li class='ingrediente'> $ingrediente </li>"; 
+             }
+           }
+           echo"</ul>";
+           echo"</section>";
+
+
+           echo "<section class='procedimento'>";
+           echo "<h2 class='recipeTitle'><u>Procedimento</u></h2>";
+           echo"<span class='procedura'>$ricetta[1]</span>"; 
+           
+           echo"</section>";
+           echo "$id";
+
+           function testfun()
+           {
+             $nome = $_GET['nome'];
+             $nome = str_replace("-", " ", $nome);
+      
+             $dbs = pg_connect("host=localhost, port=5433, dbname=dbfoodream user=postgres password=postgres");
+             
+             $email= $_SESSION['email'];
             
-            $ricetta = pg_fetch_row($result);
-            $id = $ricetta[0];
-            $ingredienti = explode('\t',$ricetta[2]);
-            echo "<ul class='ingredients'>";
-            foreach($ingredienti as $ingrediente){
-              if($ingrediente !==""){
-              $ingrediente = str_replace("Di ", "", $ingrediente);
-              echo "<li class='ingrediente'> $ingrediente </li>"; 
-              }
-            }
-            echo"</ul>";
-            echo"</section>";
+             
+              $queryNome="select * from ricetta where nome = '$nome'";
+              $salva=pg_query($dbs, $queryNome);
+              $ricetta = pg_fetch_row($salva);
+              echo "$ricetta[0]";
+               $querypref="insert into utric(utente, ricetta) values ('$email', '$ricetta[0]')";
+             $salvaImmg=pg_query($dbs, $querypref);
+           }
+         
+       
+   ?>
+       
 
-
-            echo "<section class='procedimento'>";
-            echo "<h2 class='recipeTitle'><u>Procedimento</u></h2>";
-            echo"<span class='procedura'>$ricetta[1]</span>"; 
-            
-            echo"</section>";
-
-        
-    ?>
-        
-
-        
+       
+   
+   
+   
+   
+   
     
     
     

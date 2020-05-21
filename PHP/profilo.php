@@ -74,7 +74,8 @@
         $result= pg_query_params($dbconn, $q1, array($email));
         $line=pg_fetch_array($result,null,PGSQL_ASSOC);
 
-        $pref="select * from utente";
+
+        $pref="select * from ricetta where id in(select ricetta from utRic where utente='$email')";
         $respref=pg_query($dbconn, $pref);
 
 
@@ -141,14 +142,23 @@
           
             <div class='row'> 
               
-            <table class=risultati> 
-              <thead>
+            <table class=risultati2>
+              <tr>
+                <td colspan='3' class='text-center' id='preftitle'> Lista ricette</td>
+              </tr> 
+             
+              <tr>
+                <th  class='text-center' id='colNom' >Nome ricetta</th> 
+                <th  class='text-center' id='colTipo' >Tipo piatto</th> 
+                <th  class='text-center' id'colBott' ></th>
+              
+              </tr>
               <tr>  ";
                 while(($row = pg_fetch_row($respref))){
                   echo " <tr class='text-center' id='preferiti'> 
-                   <td  class= elemento> $row[0] </td>
-                    <td  class= elemento> $row[1] </td> 
-                    <td  class= elemento> $row[2] </td>
+                   <td  class= elemento> $row[1] </td>
+                    <td  class= elemento> $row[2] </td> 
+                    <td  class= elemento> Bottone </td>
                   </tr> ";
 
               }
