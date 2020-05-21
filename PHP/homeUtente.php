@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="../CSS/newstyle.css">
         <style type="text/css"></style>
+        <script src="../javascript/logout.js"></script>
         <meta name="viewport" content="width-device-width, initial-scale=1"/>
         <meta name="viewport" content="height=device-height, initial-scale=1"/>  
        
@@ -55,7 +56,7 @@
                 </li>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="../PHP/logout.php">Logout</a>
+                  <a class="nav-link" href="javascript: logout()">Logout</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="../PHP/profilo.php">Profilo</a>

@@ -16,6 +16,7 @@
         <style type="text/css"></style>
         <meta name="viewport" content="width-device-width, initial-scale=1"/>
         <meta name="viewport" content="height=device-height, initial-scale=1"/>
+        <script src="../javascript/logout.js"></script>
         <script type="text/javascript" src="../javascript/like.js"></script>
        
     </head>
@@ -63,7 +64,7 @@
                 </li>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="logout.php">Logout</a>
+                  <a class="nav-link" href="javascript: logout()">Logout</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="profilo.php">Profilo</a>

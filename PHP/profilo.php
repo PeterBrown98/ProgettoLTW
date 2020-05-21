@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+      <script src="../javascript/logout.js"></script>
         <meta charset="utf-8">
         <title>Home Utente</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -41,7 +42,7 @@
                   </li>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="logout.php">Logout</a>
+                    <a class="nav-link" href="javascript: logout()">Logout</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="profilo.php">Profilo</a>
