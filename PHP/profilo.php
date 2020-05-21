@@ -141,19 +141,31 @@
           
             <div class='row'> 
               
-            <table class=risultati> ";
+            <table class=risultati2>
+              <tr>
+                <td colspan='3' class='text-center' id='preftitle'> Lista ricette</td>
+              </tr> 
+             
+              <tr>
+                <th  class='text-center' id='colNom' >Nome ricetta</th> 
+                <th  class='text-center' id='colTipo' >Tipo piatto</th> 
+                <th  class='text-center' id'colBott' ></th>
+              
+              </tr>
+              <tr>  ";
                 while(($row = pg_fetch_row($respref))){
-                  echo " <tr> 
-                   <td  class= elemento> $row[0] </td>
-                    <td  class= elemento> $row[1] </td> 
-                    <td  class= elemento> $row[2] </td>
+                  echo " <tr class='text-center' id='preferiti'> 
+                   <td  class= elemento> $row[1] </td>
+                    <td  class= elemento> $row[2] </td> 
+                    <td  class= elemento> Bottone </td>
                   </tr> ";
 
               }
    
    
    
-             echo "</table>   
+             echo "
+             </tr>     </table>   
                  </div> 
              </div>
           </div>
