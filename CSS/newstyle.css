@@ -305,7 +305,6 @@ section[id="steps"]{
   }
   
   #log{
-    border-radius: 35px;
     width: 250px;
     height: 35px;
   }
@@ -319,7 +318,6 @@ section[id="steps"]{
   #loginButton{
     width: 130px;
     font-size: large;
-    border-radius: 50px 50px 50px 50px;
     margin-bottom: 20px;
   }
   
@@ -569,7 +567,7 @@ th{
 
 .recipeTitle{
   font-size: 50px;
-  
+  padding-top:50px;
 }
 
 
@@ -587,12 +585,17 @@ th{
 .recipeName{
   font-size: 80px;
   display: inline;
+  
 }
 
 .nomeRicetta{
-  padding-top: 30px;
+  padding-top: 10px;
 }
 
+
+.procedura{
+  margin-bottom: 80px;
+}
 
 
 .input-title {

@@ -43,24 +43,9 @@
                   <a class="nav-link" href="homeUtente.php">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="sceltaIngredienti.php?tipoPiatto=Primo" >Primi</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="sceltaIngredienti.php?tipoPiatto=Secondo">Secondi</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="sceltaIngredienti.php?tipoPiatto=Contorno">Contorni</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="sceltaIngredienti.php?tipoPiatto=Dessert">Dolci</a>
-                </li>
-                </li>
-                <li class="nav-item">
                   <a class="nav-link" href="javascript: logout()">Logout</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../profilo.php">Profilo</a>
-                </li>
+                
 
               </ul>
             </div>
@@ -126,17 +111,19 @@
                                 $arr[1] = $cnt;
                                 $arr[2] = substr($contenuti, 0, -2);
                                 $b = str_replace(" ", "-", $arr[0]);
-                                $arr[3] = "<button type=submit class=btn-primary id=gotoRecipe><a href=paginaRicetta.php?nome=$b id=redir>$arr[0]</a></button>";
+                                $arr[3] = "<a href=paginaRicetta.php?nome=$b id=redir><button type=submit class=btn-primary id=gotoRecipe>$arr[0]</button></a>";
                             array_push($res,$arr);
                             }
                         }
+
+                        
                         
                         //ordina $res secondo cmp 
                         usort($res,"cmp");
 
                         //visualizza a schermo
                         if(count($res) == 0){
-                            echo "<h1> Nessuna ricetta trovata per gli ingredienti selezionati</h1>";
+                            echo "<h1 style= 'color:white'> Nessuna ricetta trovata per gli ingredienti selezionati</h1>";
                         }else{
                         echo "<table class='risultati'>";
                         echo "<thead>";
@@ -154,9 +141,13 @@
                         }
                         echo "</tr>";
                         echo "</table>";
+                        
                       }
                     }
+
+                    
                 ?>
+              
     </main>
       
       

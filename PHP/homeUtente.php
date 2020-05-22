@@ -43,24 +43,12 @@
                   <a class="nav-link" href="homeUtente.php">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="../PHP/sceltaIngredienti.php?tipoPiatto=Primo" >Primi</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../PHP/sceltaIngredienti.php?tipoPiatto=Secondo">Secondi</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../PHP/sceltaIngredienti.php?tipoPiatto=Contorno">Contorni</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../PHP/sceltaIngredienti.php?tipoPiatto=Dessert">Dolci</a>
-                </li>
+                  <a class="nav-link" href="../PHP/profilo.php">Profilo</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="javascript: logout()">Logout</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../PHP/profilo.php">Profilo</a>
-                </li>
+                
 
               </ul>
             </div>
