@@ -143,7 +143,7 @@
                         echo "<tr>";
                         echo "<th class='valore text-center'>Ricetta</th>";
                         echo "<th class='valore text-center'>Quantità di ingredienti tra quelli cercati</th>";
-                        echo "<th class='valore text-center'>Ingredientingredienti tra quelli cercati</th>";
+                        echo "<th class='valore text-center'>Ingredienti tra quelli cercati</th>";
                         echo "<th class='valore text-center'></th>";
                         echo "</tr>";
                         echo "<tr>";
