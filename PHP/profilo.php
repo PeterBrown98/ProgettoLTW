@@ -3,14 +3,26 @@
     <head>
       <script src="../javascript/logout.js"></script>
         <meta charset="utf-8">
-        <title>Home Utente</title>
+        <title>Profilo Utente</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link rel="stylesheet" href="../CSS/newstyle.css">
         <style type="text/css"></style>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <meta name="viewport" content="width-device-width, initial-scale=1"/>
         <meta name="viewport" content="height=device-height, initial-scale=1"/>  
-       
-    </head>
+        <script>
+            $(document).ready(
+              function(){
+                $('input:file').change(
+                  function(){
+                    if ($(this).val()) {
+                    $('input:submit').attr('disabled',false); 
+                    } 
+                  }
+                );
+              });
+          </script>
+     </head>
     <body id="body-profilo">
       <header>
         <nav class="navbar navbar-ficed-top navbar-expand-lg  navbar-dark " id="navbar">
@@ -117,7 +129,7 @@
                   <form action='config.php' method='post' enctype='multipart/form-data'>
                     <input id='img-prof' type='file' name='profile_photo' value='File'>
                     <br>
-                    <input type='submit' name='insert' id='img-prof2'>
+                    <input type='submit' name='insert' id='img-prof2' disabled>
                   </form>
               </div>
               
