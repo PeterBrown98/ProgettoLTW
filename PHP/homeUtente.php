@@ -69,13 +69,19 @@
               <div id="caros-utente1" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner" id="caros-utente1">
                   <div class="carousel-item active" id="caros-utente1">
-                    <img src="/IMMAGINI/cioccolato-fondente.jpg" class="d-block w-100" alt="..." id="imgcov">
+                    <img src="/IMMAGINI/Primi/lasagna.jpg" class="d-block w-100" alt="..." id="imgcov">
                   </div>
                   <div class="carousel-item" id="caros-utente1">
-                    <img src="/IMMAGINI/contorni.jpg" class="d-block w-100" alt="..." id="imgcov">
+                    <img src="/IMMAGINI/Primi/pasta.jpg" class="d-block w-100" alt="..." id="imgcov">
                   </div>
                   <div class="carousel-item" id="caros-utente1">
-                    <img src="/IMMAGINI/contorni.jpg" class="d-block w-100" alt="..." id="imgcov">
+                    <img src="/IMMAGINI/Primi/risottoFunghi.jpg" class="d-block w-100" alt="..." id="imgcov">
+                  </div>
+                  <div class="carousel-item" id="caros-utente1">
+                    <img src="/IMMAGINI/Primi/tortellini.jpg" class="d-block w-100" alt="..." id="imgcov">
+                  </div>
+                  <div class="carousel-item" id="caros-utente1">
+                    <img src="/IMMAGINI/Primi/zuppa.jpg" class="d-block w-100" alt="..." id="imgcov">
                   </div>
                 </div>
                 <a class="carousel-control-prev" href="#caros-utente1" role="button" data-slide="prev">
@@ -107,13 +113,19 @@
               <div id="caros-utente2" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner" id="caros-utente2">
                   <div class="carousel-item active" id="caros-utente2">
-                    <img src="/IMMAGINI/cioccolato-fondente.jpg" class="d-block w-100" alt="..." id="imgcov">
+                    <img src="/IMMAGINI/Secondi/carne.jpg" class="d-block w-100" alt="..." id="imgcov">
                   </div>
                   <div class="carousel-item" id="caros-utente2">
-                    <img src="/IMMAGINI/contorni.jpg" class="d-block w-100" alt="..." id="imgcov">
+                    <img src="/IMMAGINI/Secondi/gateau.jpg" class="d-block w-100" alt="..." id="imgcov">
                   </div>
                   <div class="carousel-item" id="caros-utente2">
-                    <img src="/IMMAGINI/contorni.jpg" class="d-block w-100" alt="..." id="imgcov">
+                    <img src="/IMMAGINI/Secondi/pesce.jpg" class="d-block w-100" alt="..." id="imgcov">
+                  </div>
+                  <div class="carousel-item" id="caros-utente2">
+                    <img src="/IMMAGINI/Secondi/polipo.jpg" class="d-block w-100" alt="..." id="imgcov">
+                  </div>
+                  <div class="carousel-item" id="caros-utente2">
+                    <img src="/IMMAGINI/Secondi/polpette.jpg" class="d-block w-100" alt="..." id="imgcov">
                   </div>
                 </div>
                 <a class="carousel-control-prev" href="#caros-utente2" role="button" data-slide="prev">
@@ -145,13 +157,19 @@
               <div id="caros-utente3" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner" id="caros-utente3">
                   <div class="carousel-item active" id="caros-utente3">
-                    <img src="/IMMAGINI/cioccolato-fondente.jpg" class="d-block w-100" alt="..." id="imgcov">
+                    <img src="/IMMAGINI/Contorni/carciofi.jpg" class="d-block w-100" alt="..." id="imgcov">
                   </div>
                   <div class="carousel-item" id="caros-utente3">
-                    <img src="/IMMAGINI/contorni.jpg" class="d-block w-100" alt="..." id="imgcov">
+                    <img src="/IMMAGINI/Contorni/funghi.jpg" class="d-block w-100" alt="..." id="imgcov">
                   </div>
                   <div class="carousel-item" id="caros-utente3">
-                    <img src="/IMMAGINI/contorni.jpg" class="d-block w-100" alt="..." id="imgcov">
+                    <img src="/IMMAGINI/Contorni/insalata.jpg" class="d-block w-100" alt="..." id="imgcov">
+                  </div>
+                  <div class="carousel-item" id="caros-utente3">
+                    <img src="/IMMAGINI/Contorni/patate.jpg" class="d-block w-100" alt="..." id="imgcov">
+                  </div>
+                  <div class="carousel-item" id="caros-utente3">
+                    <img src="/IMMAGINI/Contorni/verdureGrigliate.jpg" class="d-block w-100" alt="..." id="imgcov">
                   </div>
                 </div>
                 <a class="carousel-control-prev" href="#caros-utente3" role="button" data-slide="prev">
@@ -184,13 +202,19 @@
               <div id="caros-utente4" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner" id="caros-utente4">
                   <div class="carousel-item active" id="caros-utente4">
-                    <img src="/IMMAGINI/cioccolato-fondente.jpg" class="d-block w-100" alt="..." id="imgcov">
+                    <img src="/IMMAGINI/Dolci/muffin.jpg" class="d-block w-100" alt="..." id="imgcov">
                   </div>
                   <div class="carousel-item" id="caros-utente4">
-                    <img src="/IMMAGINI/contorni.jpg" class="d-block w-100" alt="..." id="imgcov">
+                    <img src="/IMMAGINI/Dolci/torta1.jpg" class="d-block w-100" alt="..." id="imgcov">
                   </div>
                   <div class="carousel-item" id="caros-utente4">
-                    <img src="/IMMAGINI/contorni.jpg" class="d-block w-100" alt="..." id="imgcov">
+                    <img src="/IMMAGINI/Dolci/maron.jpg" class="d-block w-100" alt="..." id="imgcov">
+                  </div>
+                  <div class="carousel-item" id="caros-utente4">
+                    <img src="/IMMAGINI/Dolci/torta2.jpg" class="d-block w-100" alt="..." id="imgcov">
+                  </div>
+                  <div class="carousel-item" id="caros-utente4">
+                    <img src="/IMMAGINI/Dolci/cannoli.jpg" class="d-block w-100" alt="..." id="imgcov">
                   </div>
                 </div>
                 <a class="carousel-control-prev" href="#caros-utente4" role="button" data-slide="prev">
