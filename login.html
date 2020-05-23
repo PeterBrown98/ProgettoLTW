@@ -46,18 +46,30 @@
     <div class="row">
      
       <div class="col-md-4 offset-md-8">
-        <div class="Form" id="login" >
-          <form action="/PHP/login.php" method="POST">
-          <h1 class="accesso">EFFETTUA L'ACCESSO</h1>
-          <div class="nome">
-          <label for="username">Username</label><br>
-          <input type="text" id="log" name="email" placeholder="Inserisci il tuo username"><br>
-          </div>
-          <label for="password">Password</label><br>
-          <input type="password" id="log" name="password" placeholder="Inserisci la password"><br><br>
-          <button type="submit" name="accedi" id="loginButton" class="btn-primary">ACCEDI</button>
-          <h4>Non sei iscritto? Clicca <a href="/registrazione.html" style="color: antiquewhite;">qui</a></h4>
-      </div>    
+       
+          <form id="formlogin"  action="/PHP/login.php" method="POST">
+              <br>
+              <br>
+            <div class="form-group">
+              <label for="username">Email</label><br>
+              <input type="text" id="InputEmail" class="form-control" name="email" placeholder="Inserisci la tua email" required><br>
+              <br>
+           
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label><br>
+              <input type="password" id="InputEmail" class="form-control" name="password" placeholder="Inserisci la password" required><br><br>
+            
+              
+            </div>
+          <button type="submit" name="accedi" id="loginButton" class="btn btn-primary">Accedi</button>
+            <br>
+            
+          <h4>Non sei iscritto? Clicca <a href="registrazione.html" style="color: antiquewhite;">qui</a></h4>
+          <br>
+          <br>
+          <br>
+      
           
         </form>
       </div>

@@ -43,6 +43,9 @@
                   <a class="nav-link" href="homeUtente.php">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
+                  <a class="nav-link" href="profilo.php">Profilo</a>
+                </li>
+                <li class="nav-item">
                   <a class="nav-link" href="javascript: logout()">Logout</a>
                 </li>
                 
@@ -123,7 +126,10 @@
 
                         //visualizza a schermo
                         if(count($res) == 0){
-                            echo "<h1 style= 'color:white'> Nessuna ricetta trovata per gli ingredienti selezionati</h1>";
+                            echo "<h1 style = 'color:white; padding:30px;'> Nessuna ricetta trovata per gli ingredienti selezionati</h1><br><br>
+                            <h1 style = 'color:white; padding:30px;'> Torna alla <a href='sceltaIngredienti.php?tipoPiatto=$i6'>pagina</a> di scelta degli ingredienti</h1>
+                            ";
+
                         }else{
                         echo "<table class='risultati'>";
                         echo "<thead>";

@@ -262,8 +262,8 @@ section[id="steps"]{
 }
 
 .tipo:hover{
-  color: grey;
-  text-shadow: 3px 3px black;
+  color: black;
+  text-shadow: 3px 3px grey;
 }
 
 /*-------------------------------*/
@@ -363,6 +363,13 @@ button{
 
 } 
 
+#formlogin{
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
 
 
 /*----PROFILO------*/
@@ -434,6 +441,10 @@ button{
   margin-bottom: auto;
   font-size: 100%;
 }
+
+
+
+
 hr{
   width: 100%;
   border: 0.5px solid #e6e6e6;
@@ -441,7 +452,10 @@ hr{
 }
 #p-prof{
   text-align: center;
+  font-size: 30px;
+  color: #e6e6e6;
 }
+
 
 #img-prof{
   color: #e6e6e6;
@@ -573,6 +587,10 @@ th{
 
 .ingredienti, .procedimento, .ingredients{
   padding-left: 30px;
+
+}
+.procedimento{
+  margin-bottom: 10%;
 }
 
 
