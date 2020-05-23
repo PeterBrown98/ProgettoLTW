@@ -363,6 +363,13 @@ button{
 
 } 
 
+#formlogin{
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
 
 
 /*----PROFILO------*/
