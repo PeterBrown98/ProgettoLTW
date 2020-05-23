@@ -12,8 +12,12 @@
                 $q1="select * from utente where email=$1";
                 $result= pg_query_params($dbconn, $q1, array($email));
                 if(($line=pg_fetch_array($result,null,PGSQL_ASSOC))){
-                    echo "<h1> Spiacente, sei già registrato </h1>
-                    <a href=../login.html>Clicca qui per effettuare il login</a>";
+                    $message = "Email già utilizzata da un altro utente";
+
+                        echo "<SCRIPT> //not showing me this
+                            alert('$message')
+                            window.location.replace('../registrazione.html');
+                        </SCRIPT>";
                 }
                 else{
                     $nome= $_POST['nome'];
@@ -21,8 +25,12 @@
                     $psw= md5($_POST['psw']);
                     $rpsw= md5($_POST['rpsw']);
                     if($psw!=$rpsw){
-                        echo "<h1> Spiacente, le password immesse non coincidono </h1>
-                        <a href=../registrazione.html>Riprova</a>";
+                        $message = "Spiacente, le password inserite non coincidono";
+
+                        echo "<SCRIPT> //not showing me this
+                            alert('$message')
+                            window.location.replace('../registrazione.html');
+                        </SCRIPT>";
                     }
                     else{
 
@@ -40,22 +48,26 @@
 
                         $es_data = pg_escape_bytea($data2);
                         fclose($img);
-                        //$query=    "update images set data = '$es_data' ";
+                      
                         $query2 = "insert into images(email, data) values ('$email', '$es_data')";
                         pg_query($dbconn, $query2);
 
                        
 
                         if($data){
-                            //echo "<h1> Registrazione completata clicca</h1> <a href=../login.html>qui</a> per effettuare il login";
-                            
+                        
        
-                            header("Location: ../login.html");
+                            $message = "Registrazione effettuata con successo! Esegui il login per accedere al sito";
+
+                            echo "<SCRIPT> //not showing me this
+                                alert('$message')
+                                window.location.replace('../login.html');
+                            </SCRIPT>";
 
 
 
                         }
-                        else echo "<h1>NON FUNZIONA</h1>";
+                        else echo "<h1>Errore</h1>";
                     }
                 }
                

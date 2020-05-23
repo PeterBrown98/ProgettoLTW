@@ -133,9 +133,9 @@
                   </form>
                   <hr id='hrp'>
 
-                  <form action='eliminaProfilo.php' method='post' enctype='multipart/form-data'>
+                  <form action='eliminaProfilo.php' method='post' enctype='multipart/form-data' onsubmit='return eliminaProfilo();'>
                  
-                  <p id='p-prof'> Clicca qui per eliminare il profilo</p> <input type='submit' name='delete' id='img-prof2' value='Elimina' >
+                  <p id='p-prof'> Clicca qui per eliminare il profilo</p> <input type='submit'  name='delete' id='img-prof2' value='Elimina' >
                   </form>
 
               </div>
@@ -213,6 +213,10 @@
 
 
 
+
+          }
+          function eliminaProfilo() {
+            return confirm("Sicuro di voler eliminare il profilo?");
 
           }
 

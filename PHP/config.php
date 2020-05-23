@@ -22,7 +22,7 @@
             $email=$_SESSION['email'];
 
 
-            $img=fopen($file_name, 'r') or die("cannot read image\n");
+            $img=fopen($file_name, 'r') or die("File inserito non supportato o di dimensioni troppo grandi (MAX 2 MegaByte)\n");
             $data= fread($img, filesize($file_name));
 
             $es_data = pg_escape_bytea($data);

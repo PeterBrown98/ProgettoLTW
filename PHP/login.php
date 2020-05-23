@@ -12,16 +12,26 @@
                 $q1="select * from utente where email=$1";
                 $result=pg_query_params($dbconn, $q1, array($email));
                 if(!($line=pg_fetch_array($result,null,PGSQL_ASSOC))){
-                    echo "<h1> Non sei ancora registrato su Foodream? Nessun problema </h1>
-                    <a href=../registrazione.html>registrati ora</a>";
+                    $message = "Email inserita non associata a nessun utente";
+
+                    echo "<SCRIPT> //not showing me this
+                        alert('$message')
+                        window.location.replace('../login.html');
+                    </SCRIPT>";
                 }
                 else{
                     $password=md5($_POST['password']);
                     $q2="select * from utente where email=$1 and password=$2";
                     $result= pg_query_params($dbconn, $q2, array($email, $password));
                     if(!($line=pg_fetch_array($result,null,PGSQL_ASSOC))){
-                        echo "<h1> Password errata, </h1>
-                        <a href=/login.html>riprova</a>";
+                       
+                       
+                        $message = 'Password inserita errata';
+
+                        echo "<SCRIPT> //not showing me this
+                            alert('$message')
+                            window.location.replace('../login.html');
+                        </SCRIPT>";
                     }
                     else{
                         
@@ -37,6 +47,11 @@
             }
             
             ?>
+            <script>
+            function pswdErr(){
+                alert("La password inserita non è corretta");
+            }
+            </script>
 
     </body>
 </html>
