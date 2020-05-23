@@ -31,8 +31,8 @@
 
 
                                                              
-                        $file_name="foodream.png";
-                        //$email=$_SESSION['email'];
+                        $file_name="../IMMAGINI/profilo.jpg";
+                       
 
 
                         $img=fopen($file_name, 'r') or die("cannot read image\n");

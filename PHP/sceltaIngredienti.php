@@ -15,12 +15,28 @@
         $(document).ready(function(){
             $(".awesomplete").change(function() {
             $(this).css('background-color','green');
+        });
         })
         </script>
 
     </head>
     <body>
         <?php
+             session_start();
+
+             if (isset( $_SESSION['email'] ) ) {
+               
+                 // Grab user data from the database using the user_id
+                 // Let them access the "logged in only" pages
+             } else {
+                 // Redirect them to the login page
+                 session_destroy();
+                 header("Location: ../index.html");
+             }
+
+
+
+
             $tipo=$_GET['tipoPiatto'];
     
        echo "<header>";

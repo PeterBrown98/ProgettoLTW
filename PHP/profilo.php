@@ -131,6 +131,13 @@
                     <br>
                     <input type='submit' name='insert' id='img-prof2' disabled>
                   </form>
+                  <hr id='hrp'>
+
+                  <form action='eliminaProfilo.php' method='post' enctype='multipart/form-data'>
+                 
+                  <p id='p-prof'> Clicca qui per eliminare il profilo</p> <input type='submit' name='delete' id='img-prof2' value='Elimina' >
+                  </form>
+
               </div>
               
 

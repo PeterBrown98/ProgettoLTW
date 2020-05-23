@@ -13,7 +13,7 @@
                 $result=pg_query_params($dbconn, $q1, array($email));
                 if(!($line=pg_fetch_array($result,null,PGSQL_ASSOC))){
                     echo "<h1> Non sei ancora registrato su Foodream? Nessun problema </h1>
-                    <a href=../registrazione2.html>registrati ora</a>";
+                    <a href=../registrazione.html>registrati ora</a>";
                 }
                 else{
                     $password=md5($_POST['password']);

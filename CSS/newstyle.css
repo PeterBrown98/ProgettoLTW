@@ -453,6 +453,7 @@ hr{
 #p-prof{
   text-align: center;
   font-size: 30px;
+  color: #e6e6e6;
 }
 
 
@@ -586,6 +587,10 @@ th{
 
 .ingredienti, .procedimento, .ingredients{
   padding-left: 30px;
+
+}
+.procedimento{
+  margin-bottom: 10%;
 }
 
 
