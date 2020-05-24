@@ -127,9 +127,9 @@
                  
                   <hr id='hrp'>
                   <form action='config.php' method='post' enctype='multipart/form-data'>
-                    <input id='img-prof' type='file' name='profile_photo' value='File'>
+                    <input id='img-prof' type='file' name='profile_photo' value='File' onchange='ValidateSize(this)'>
                     <br>
-                    <input type='submit' name='insert' id='img-prof2' disabled>
+                    <input type='submit' name='insert' id='img-prof2' value='Carica'>
                   </form>
                   <hr id='hrp'>
 
@@ -187,6 +187,15 @@
       </footer>
 
             <script>
+          function ValidateSize(file) {
+            var FileSize = file.files[0].size / 1024 / 1024; // in MB
+                if (FileSize > 6) {
+              alert('Il file supera 6 MB');
+           // $(file).val(''); //for clearing with Jquery
+        } else {
+
+        }
+    }
               
           function elimina(o) {
             if(confirm("Sei sicuro di voler eliminare la ricetta dai preferiti?")){
