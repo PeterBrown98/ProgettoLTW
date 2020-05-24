@@ -28,14 +28,6 @@
         });
         })
         </script>
-        <script>
-            $(document).ready(function(){
-                if ($(#ing1)) $(#ing2).css('display','block');
-                if ($(#ing2).css('Background-color')=='green') $(#ing3).css('display','block');
-                if ($(#ing3).css('Background-color')=='green') $(#ing4).css('display','block');
-                if ($(#ing4).css('Background-color')=='green') $(#ing5).css('display','block');
-            })
-        </script>
 
     </head>
     <body>
@@ -43,11 +35,7 @@
              session_start();
 
              if (isset( $_SESSION['email'] ) ) {
-               
-                 // Grab user data from the database using the user_id
-                 // Let them access the "logged in only" pages
              } else {
-                 // Redirect them to the login page
                  session_destroy();
                  header("Location: ../index.html");
              }
@@ -113,14 +101,9 @@
                     
                         echo "</datalist>";
                         
-                        echo '<button type="submit" class="btn-primary" id="srchbtn" name="cerca" >Cerca Ricetta</button>';
+                        echo '<button type="submit" class="btn btn-lg btn-primary" id="srchbtn" name="cerca" disabled>Cerca Ricetta</button>';
                         echo "</form>";
 
-                        echo"<script>
-                        $('.awesomplete').change(function() {
-                            $(this).css('background-color','green')
-                        })
-                        </script>";
                         
         echo " </main>";
         echo '<footer id="sticky-footer" class="py-4  text-white">';
