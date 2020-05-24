@@ -78,8 +78,8 @@
              
         echo "<main>";
             echo "<h1 class='title' style='text-align: center'>Scegli gli ingredienti che vuoi usare per il tuo <p style='color:green'>$tipo</p></h1>";
-            echo '<section class="ricerca">';
-                echo "<form action='ricette.php?tipoPiatto=$tipo'method='post'>";
+            echo "<div  id='ricercaIngredienti' >";
+                echo "<form id='formRicette' action='ricette.php?tipoPiatto=$tipo'method='post'>";
                 echo '<input class="awesomplete" id="ing1" name="i1" list="mylist" placeholder = "Seleziona un ingrediente"/>';
                 echo "<br>";
                 echo "<br>";
@@ -105,6 +105,7 @@
                         
                         echo '<button type="submit" class="btn btn-lg btn-primary" id="srchbtn" name="cerca" disabled>Cerca Ricetta</button>';
                         echo "</form>";
+                        echo "</div>";
 
                         
         echo " </main>";
