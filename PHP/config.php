@@ -3,10 +3,7 @@
         session_start();
 
         if (isset( $_SESSION['email'] ) ) {
-            // Grab user data from the database using the user_id
-            // Let them access the "logged in only" pages
         } else {
-            // Redirect them to the login page
             session_destroy();
             header("Location: ../index.html");
         }
@@ -45,15 +42,6 @@
                 </SCRIPT>";
             }
             else{
-            // $size=filesize(realpath($file_name));
-            // if($size>8388608){
-            //     $message = "File troppo grande";
-
-            //     echo "<SCRIPT> //not showing me this
-            //         alert('$message')
-            //         window.location.replace('../PHP/profilo.php');
-            //     </SCRIPT>";
-            // }
             $img=fopen($file_name, 'r') or die("File troppo grosso\n");
            
             
@@ -69,7 +57,6 @@
             pg_query($dbconn, $query)or die("File troppo grosso\n");
 
             pg_close($dbconn);
-           // header("Location: profilo.php");
             $message = "Immagine salvata con successo!";
 
             echo "<SCRIPT> //not showing me this

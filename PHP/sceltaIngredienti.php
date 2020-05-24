@@ -15,6 +15,7 @@
         $(document).ready(function(){
             $(".awesomplete").change(function() {
             $(this).css('background-color','green');
+            $("#srchbtn").removeAttr('disabled');
         });
         })
         </script>
@@ -25,11 +26,7 @@
              session_start();
 
              if (isset( $_SESSION['email'] ) ) {
-               
-                 // Grab user data from the database using the user_id
-                 // Let them access the "logged in only" pages
              } else {
-                 // Redirect them to the login page
                  session_destroy();
                  header("Location: ../index.html");
              }
@@ -95,14 +92,9 @@
                     
                         echo "</datalist>";
                         
-                        echo '<button type="submit" class="btn-primary" id="srchbtn" name="cerca" >Cerca Ricetta</button>';
+                        echo '<button type="submit" class="btn btn-lg btn-primary" id="srchbtn" name="cerca" disabled>Cerca Ricetta</button>';
                         echo "</form>";
 
-                        echo"<script>
-                        $('.awesomplete').change(function() {
-                            $(this).css('background-color','green')
-                        })
-                        </script>";
                         
         echo " </main>";
         echo '<footer id="sticky-footer" class="py-4  text-white">';

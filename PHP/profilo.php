@@ -46,11 +46,7 @@
             session_start();
 
             if (isset( $_SESSION['email'] ) ) {
-              
-                // Grab user data from the database using the user_id
-                // Let them access the "logged in only" pages
             } else {
-                // Redirect them to the login page
                 session_destroy();
                 header("Location: ../index.html");
             }
@@ -123,7 +119,7 @@
 
                   <form action='eliminaProfilo.php' method='post' enctype='multipart/form-data' onsubmit='return eliminaProfilo();'>
                  
-                  <p id='p-prof'> Clicca qui per eliminare il profilo</p> <input type='submit'  name='delete' id='img-prof2' value='Elimina' >
+                  <p id='p-prof'> Clicca qui per eliminare il profilo</p> <input type='submit' class='btn btn-danger' name='delete' id='img-prof2' value='Elimina' style = 'color:#e6e6e6'>
                   </form>
 
               </div>
@@ -156,7 +152,7 @@
                    <td  class= elemento> <a href=../PHP/paginaRicetta.php?nome=$b style='color: black;'>$row[1]</a> </td>
                    
                     <td  class= elemento> $row[2] </td> 
-                    <td class= elemento><input id='btnpref' class='btn-danger' type='button' value='Elimina da preferiti' 
+                    <td class= elemento><input id='btnpref' class='btn btn-danger' type='button' value='Elimina da preferiti' 
                     onclick='elimina(this)'> </td>
                   </tr> ";
               }
@@ -179,7 +175,6 @@
             var FileSize = file.files[0].size / 1024 / 1024; // in MB
                 if (FileSize > 6) {
               alert('Il file supera 6 MB');
-           // $(file).val(''); //for clearing with Jquery
         } else {
 
         }
@@ -192,9 +187,6 @@
                 var nome= p.firstElementChild.innerText;
                
                 
-                // window.location.href="eliminaPref.php?nome=" +nome;
-                // p.parentNode.removeChild(p);
-               
 
                 $.ajax({
                       url: 'eliminaPref.php',
