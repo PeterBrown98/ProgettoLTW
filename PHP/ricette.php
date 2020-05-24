@@ -17,10 +17,7 @@
         session_start();
 
         if (isset( $_SESSION['email'] ) ) {
-            // Grab user data from the database using the user_id
-            // Let them access the "logged in only" pages
         } else {
-            // Redirect them to the login page
             session_destroy();
             header("Location: ../index.html");
         }
@@ -124,7 +121,6 @@
                         //ordina $res secondo cmp 
                         usort($res,"cmp");
 
-                        //visualizza a schermo
                         if(count($res) == 0){
                             echo "<h1 style = 'color:white; padding:30px;'> Nessuna ricetta trovata per gli ingredienti selezionati</h1><br><br>
                             <h1 style = 'color:white; padding:30px;'> Torna alla <a href='sceltaIngredienti.php?tipoPiatto=$i6'>pagina</a> di scelta degli ingredienti</h1>

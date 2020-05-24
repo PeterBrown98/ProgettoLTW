@@ -705,3 +705,13 @@ border-radius: 0;
   display: inline-block;
   white-space: nowrap;
 }
+
+/*-------------About---------------*/
+
+.nomiCognomi{
+  font-size: 25px;
+}
+
+.titoli{
+  font-size: 60px;
+}

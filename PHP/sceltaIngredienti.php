@@ -6,7 +6,12 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="../CSS/newstyle.css">
         <link rel="stylesheet" href="awesomplete.css" />
-        <style type="text/css"></style>
+        <style type="text/css">
+            #ing2{display: none;}
+            #ing3{display: none;}
+            #ing4{display: none;}
+            #ing5{display: none;}
+        </style>
         <meta name="viewport" content="width-device-width, initial-scale=1"/>
         <meta name="viewport" content="height=device-height, initial-scale=1"/> 
         <script src="awesomplete.js" async></script>
@@ -15,6 +20,11 @@
         $(document).ready(function(){
             $(".awesomplete").change(function() {
             $(this).css('background-color','green');
+            var id = $(this).attr("id");
+            if (id=="ing1") $("#ing2").css('display','block');
+            if (id=="ing2") $("#ing3").css('display','block');
+            if (id=="ing3") $("#ing4").css('display','block');
+            if (id=="ing4") $("#ing5").css('display','block');
         });
         })
         </script>
@@ -25,11 +35,7 @@
              session_start();
 
              if (isset( $_SESSION['email'] ) ) {
-               
-                 // Grab user data from the database using the user_id
-                 // Let them access the "logged in only" pages
              } else {
-                 // Redirect them to the login page
                  session_destroy();
                  header("Location: ../index.html");
              }
@@ -75,13 +81,13 @@
                 echo "<form action='ricette.php?tipoPiatto=$tipo'method='post'>";
                 echo '<input class="awesomplete" id="ing1" name="i1" list="mylist" placeholder = "Seleziona un ingrediente"/>';
                 echo "<br>";
-                echo '<input class="awesomplete" name="i2" list="mylist" placeholder = "Seleziona un ingrediente"/>';
+                echo '<input class="awesomplete" id="ing2" name="i2" list="mylist" placeholder = "Seleziona un ingrediente"/>';
                 echo "<br>";
-                echo '<input class="awesomplete" name="i3" list="mylist" placeholder = "Seleziona un ingrediente"/>';
+                echo '<input class="awesomplete" id="ing3" name="i3" list="mylist" placeholder = "Seleziona un ingrediente"/>';
                 echo "<br>";
-                echo '<input class="awesomplete" name="i4" list="mylist" placeholder = "Seleziona un ingrediente"/>';
+                echo '<input class="awesomplete" id="ing4" name="i4" list="mylist" placeholder = "Seleziona un ingrediente"/>';
                 echo "<br>";
-                echo '<input class="awesomplete" name="i5" list="mylist" placeholder = "Seleziona un ingrediente"/>';
+                echo '<input class="awesomplete" id="ing5" name="i5" list="mylist" placeholder = "Seleziona un ingrediente"/>';
                 echo "<br>";
                 echo "<br>";
                 echo "<br>";
@@ -95,14 +101,9 @@
                     
                         echo "</datalist>";
                         
-                        echo '<button type="submit" class="btn-primary" id="srchbtn" name="cerca" >Cerca Ricetta</button>';
+                        echo '<button type="submit" class="btn btn-lg btn-primary" id="srchbtn" name="cerca" disabled>Cerca Ricetta</button>';
                         echo "</form>";
 
-                        echo"<script>
-                        $('.awesomplete').change(function() {
-                            $(this).css('background-color','green')
-                        })
-                        </script>";
                         
         echo " </main>";
         echo '<footer id="sticky-footer" class="py-4  text-white">';
