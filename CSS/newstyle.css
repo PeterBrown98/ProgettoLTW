@@ -285,60 +285,7 @@ section[id="steps"]{
     margin-left: 20px;
   }
 
-/*------------------LOGIN ENRICO----------*/
 
-
-.Form{
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 45px 45px 45px 45px;
-    padding-top: 50px;
-    padding-left: 20px;
-    margin-top: 30vh;
-    display: inline-block;
-    color: #000;
-    position: static;
-    margin-bottom: 70px;
-  }
-  .accesso{
-    font-size: 30px;
-    padding-bottom: 30px;
-  }
-  
-  #log{
-    width: 250px;
-    height: 35px;
-  }
-  .prova{
-    background-image: url(/IMMAGINI/sfondo.jpg);
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-  }
-
-  #loginButton{
-    width: 130px;
-    font-size: large;
-    margin-bottom: 20px;
-  }
-  
-  
-  
-  #loginButton:hover{
-    background-color: black;
-    color: white;
-    border-color: black;
-  }
-  
-  input{
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  
-  
-  #login{
-    height: 400px;
-    width: 300px;
-  }
   
 /*----------FORM---------------*/
 form{
@@ -356,12 +303,7 @@ form{
     color: white;
 }  
 
-button{
-    width: 30%;
-    margin-right: 40px;
-   
 
-} 
 
 #formlogin{
   margin-top: auto;

@@ -18,10 +18,9 @@
         session_start();
 
         if (isset( $_SESSION['email'] ) ) {
-            // Grab user data from the database using the user_id
-            // Let them access the "logged in only" pages
+            
         } else {
-            // Redirect them to the login page
+           
             session_destroy();
             header("Location: ../index.html");
         }
@@ -199,23 +198,23 @@
             </div>
             <div class="col4">
 
-
-              <div id="caros-utente4" class="carousel slide" data-ride="carousel">
+            <div class="carousel">
+              <div id="caros-utente4" class="carousel slide" data-ride="carousel" data-interval="250">
                 <div class="carousel-inner" id="caros-utente4">
                   <div class="carousel-item active" id="caros-utente4">
-                    <img src="/IMMAGINI/Dolci/muffin.jpg" class="d-block w-100" alt="..." id="imgcov">
+                    <img src="/IMMAGINI/Dolci/muffin.jpg" class="d-block w-100"  id="imgcov">
                   </div>
                   <div class="carousel-item" id="caros-utente4">
-                    <img src="/IMMAGINI/Dolci/torta1.jpg" class="d-block w-100" alt="..." id="imgcov">
+                    <img src="/IMMAGINI/Dolci/torta1.jpg" class="d-block w-100"  id="imgcov">
                   </div>
                   <div class="carousel-item" id="caros-utente4">
-                    <img src="/IMMAGINI/Dolci/maron.jpg" class="d-block w-100" alt="..." id="imgcov">
+                    <img src="/IMMAGINI/Dolci/maron.jpg" class="d-block w-100"  id="imgcov">
                   </div>
                   <div class="carousel-item" id="caros-utente4">
-                    <img src="/IMMAGINI/Dolci/torta2.jpg" class="d-block w-100" alt="..." id="imgcov">
+                    <img src="/IMMAGINI/Dolci/torta2.jpg" class="d-block w-100"  id="imgcov">
                   </div>
                   <div class="carousel-item" id="caros-utente4">
-                    <img src="/IMMAGINI/Dolci/cannoli.jpg" class="d-block w-100" alt="..." id="imgcov">
+                    <img src="/IMMAGINI/Dolci/cannoli.jpg" class="d-block w-100"  id="imgcov">
                   </div>
                 </div>
                 <a class="carousel-control-prev" href="#caros-utente4" role="button" data-slide="prev">
@@ -227,7 +226,7 @@
                   <span class="sr-only">Next</span>
                 </a>
               </div>
-
+              </div>
 
 
             </div>

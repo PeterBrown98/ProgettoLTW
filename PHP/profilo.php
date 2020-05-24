@@ -114,7 +114,7 @@
                  
                  
                   <hr id='hrp'>
-                  <form action='config.php' method='post' enctype='multipart/form-data'>
+                  <form action='uploadImg.php' method='post' enctype='multipart/form-data'>
                     <input id='img-prof' type='file' name='profile_photo' value='File' onchange='ValidateSize(this)'>
                     <br>
                     <input type='submit' name='insert' id='img-prof2' value='Carica'>
@@ -188,14 +188,7 @@
           function elimina(o) {
             if(confirm("Sei sicuro di voler eliminare la ricetta dai preferiti?")){
                 var p=o.parentNode.parentNode;
-                
                 var nome= p.firstElementChild.innerText;
-               
-                
-                // window.location.href="eliminaPref.php?nome=" +nome;
-                // p.parentNode.removeChild(p);
-               
-
                 $.ajax({
                       url: 'eliminaPref.php',
                       type: 'GET',
@@ -206,25 +199,16 @@
                         p.parentNode.removeChild(p);
                       }
                   });
-            }
-
-
-
-
+             }
           }
           function eliminaProfilo() {
             return confirm("Sicuro di voler eliminare il profilo?");
 
           }
-
-
-          
           </script>
           <script  src="https://code.jquery.com/jquery-3.5.1.min.js"  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="  crossorigin="anonymous"></script>
           <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-
-
-          <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
          
     </body>
 </html>
