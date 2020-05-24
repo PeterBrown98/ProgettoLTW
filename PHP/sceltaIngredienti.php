@@ -25,6 +25,7 @@
             if (id=="ing2") $("#ing3").css('display','block');
             if (id=="ing3") $("#ing4").css('display','block');
             if (id=="ing4") $("#ing5").css('display','block');
+            $("#srchbtn").removeAttr('disabled');
         });
         })
         </script>
