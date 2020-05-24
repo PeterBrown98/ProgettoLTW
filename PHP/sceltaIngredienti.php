@@ -6,7 +6,12 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="../CSS/newstyle.css">
         <link rel="stylesheet" href="awesomplete.css" />
-        <style type="text/css"></style>
+        <style type="text/css">
+            #ing2{display: none;}
+            #ing3{display: none;}
+            #ing4{display: none;}
+            #ing5{display: none;}
+        </style>
         <meta name="viewport" content="width-device-width, initial-scale=1"/>
         <meta name="viewport" content="height=device-height, initial-scale=1"/> 
         <script src="awesomplete.js" async></script>
@@ -15,8 +20,21 @@
         $(document).ready(function(){
             $(".awesomplete").change(function() {
             $(this).css('background-color','green');
+            var id = $(this).attr("id");
+            if (id=="ing1") $("#ing2").css('display','block');
+            if (id=="ing2") $("#ing3").css('display','block');
+            if (id=="ing3") $("#ing4").css('display','block');
+            if (id=="ing4") $("#ing5").css('display','block');
         });
         })
+        </script>
+        <script>
+            $(document).ready(function(){
+                if ($(#ing1)) $(#ing2).css('display','block');
+                if ($(#ing2).css('Background-color')=='green') $(#ing3).css('display','block');
+                if ($(#ing3).css('Background-color')=='green') $(#ing4).css('display','block');
+                if ($(#ing4).css('Background-color')=='green') $(#ing5).css('display','block');
+            })
         </script>
 
     </head>
@@ -75,13 +93,13 @@
                 echo "<form action='ricette.php?tipoPiatto=$tipo'method='post'>";
                 echo '<input class="awesomplete" id="ing1" name="i1" list="mylist" placeholder = "Seleziona un ingrediente"/>';
                 echo "<br>";
-                echo '<input class="awesomplete" name="i2" list="mylist" placeholder = "Seleziona un ingrediente"/>';
+                echo '<input class="awesomplete" id="ing2" name="i2" list="mylist" placeholder = "Seleziona un ingrediente"/>';
                 echo "<br>";
-                echo '<input class="awesomplete" name="i3" list="mylist" placeholder = "Seleziona un ingrediente"/>';
+                echo '<input class="awesomplete" id="ing3" name="i3" list="mylist" placeholder = "Seleziona un ingrediente"/>';
                 echo "<br>";
-                echo '<input class="awesomplete" name="i4" list="mylist" placeholder = "Seleziona un ingrediente"/>';
+                echo '<input class="awesomplete" id="ing4" name="i4" list="mylist" placeholder = "Seleziona un ingrediente"/>';
                 echo "<br>";
-                echo '<input class="awesomplete" name="i5" list="mylist" placeholder = "Seleziona un ingrediente"/>';
+                echo '<input class="awesomplete" id="ing5" name="i5" list="mylist" placeholder = "Seleziona un ingrediente"/>';
                 echo "<br>";
                 echo "<br>";
                 echo "<br>";
