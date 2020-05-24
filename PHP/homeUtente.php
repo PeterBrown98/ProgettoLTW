@@ -66,7 +66,7 @@
             <div class="col4">
 
 
-              <div id="caros-utente1" class="carousel slide" data-ride="carousel">
+              <div id="caros-utente1" class="carousel slide" data-ride="carousel" data-interval="2500">
                 <div class="carousel-inner" id="caros-utente1">
                   <div class="carousel-item active" id="caros-utente1">
                     <img src="/IMMAGINI/Primi/lasagna.jpg" class="d-block w-100" alt="..." id="imgcov">
@@ -110,7 +110,7 @@
             <div class="col4">
 
 
-              <div id="caros-utente2" class="carousel slide" data-ride="carousel">
+              <div id="caros-utente2" class="carousel slide" data-ride="carousel" data-interval="2500">
                 <div class="carousel-inner" id="caros-utente2">
                   <div class="carousel-item active" id="caros-utente2">
                     <img src="/IMMAGINI/Secondi/carne.jpg" class="d-block w-100" alt="..." id="imgcov">
@@ -154,7 +154,7 @@
             <div class="col4">
 
 
-              <div id="caros-utente3" class="carousel slide" data-ride="carousel">
+              <div id="caros-utente3" class="carousel slide" data-ride="carousel" data-interval="2500">
                 <div class="carousel-inner" id="caros-utente3">
                   <div class="carousel-item active" id="caros-utente3">
                     <img src="/IMMAGINI/Contorni/carciofi.jpg" class="d-block w-100" alt="..." id="imgcov">
@@ -198,8 +198,8 @@
             </div>
             <div class="col4">
 
-            <div class="carousel">
-              <div id="caros-utente4" class="carousel slide" data-ride="carousel" data-interval="250">
+          
+              <div id="caros-utente4" class="carousel slide" data-ride="carousel" data-interval="2500">
                 <div class="carousel-inner" id="caros-utente4">
                   <div class="carousel-item active" id="caros-utente4">
                     <img src="/IMMAGINI/Dolci/muffin.jpg" class="d-block w-100"  id="imgcov">
@@ -226,7 +226,7 @@
                   <span class="sr-only">Next</span>
                 </a>
               </div>
-              </div>
+              
 
 
             </div>
