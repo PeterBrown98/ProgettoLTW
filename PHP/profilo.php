@@ -10,18 +10,6 @@
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <meta name="viewport" content="width-device-width, initial-scale=1"/>
         <meta name="viewport" content="height=device-height, initial-scale=1"/>  
-        <script>
-            $(document).ready(
-              function(){
-                $('input:file').change(
-                  function(){
-                    if ($(this).val()) {
-                    $('input:submit').attr('disabled',false); 
-                    } 
-                  }
-                );
-              });
-          </script>
      </head>
     <body id="body-profilo">
       <header>
