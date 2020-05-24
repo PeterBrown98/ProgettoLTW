@@ -77,7 +77,7 @@
         echo "</header>";
              
         echo "<main>";
-            echo '<h1 class="title">Scegli gli ingredienti che vuoi usare</h1>';
+            echo "<h1 class='title'>Scegli gli ingredienti che vuoi usare per il tuo $tipo</h1>";
             echo '<section class="ricerca">';
                 echo "<form action='ricette.php?tipoPiatto=$tipo'method='post'>";
                 echo '<input class="awesomplete" id="ing1" name="i1" list="mylist" placeholder = "Seleziona un ingrediente"/>';
