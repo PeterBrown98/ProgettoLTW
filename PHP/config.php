@@ -33,6 +33,14 @@
             $allowed = array('jpeg', 'png', 'jpg');
            
             $ext = pathinfo($filename, PATHINFO_EXTENSION);
+            if ($filename==""){
+                $message = "Non hai inserito nessun file!";
+
+                echo "<SCRIPT> //not showing me this
+                    alert('$message')
+                    window.location.replace('../PHP/profilo.php');
+                </SCRIPT>";
+            }
             if (!in_array($ext, $allowed)) {
                 $message = "File non consentito! Inserire solo formati jpeg, jpg o png";
 

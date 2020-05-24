@@ -175,9 +175,10 @@
             var FileSize = file.files[0].size / 1024 / 1024; // in MB
                 if (FileSize > 6) {
               alert('Il file supera 6 MB');
-        } else {
-
-        }
+              $("#img-prof").replaceWith($("#img-prof").val('').clone(true));
+              return false
+          
+        } 
     }
               
           function elimina(o) {
