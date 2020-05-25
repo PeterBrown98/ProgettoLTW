@@ -78,13 +78,13 @@
         echo "</header>";
              
         echo "<main>";
-            echo "<h1 class='title' style='text-align: center'>Scegli gli ingredienti che vuoi usare per il tuo <span style='color:green'> $tipo</span></h1>";
+            echo "<h1 class='title' style='text-align: center'>Scegli gli ingredienti che vuoi usare per il tuo <span style='color:yellow'> $tipo</span></h1>";
             echo "<div  id='ricercaIngredienti' >";
                 echo "<form id='formRicette' action='ricette.php?tipoPiatto=$tipo'method='post' onsubmit='f()
                 '>";
                 echo '<input class="awesomplete" id="ing1" name="i1" list="mylist" placeholder = "Seleziona un ingrediente"/>';
                 echo "<br>";
-                
+                echo "<br>";
                 echo '<input class="awesomplete" id="ing2" name="i2" list="mylist" placeholder = "Seleziona un ingrediente"/>';
                 echo "<br>";
                 echo '<input class="awesomplete" id="ing3" name="i3" list="mylist" placeholder = "Seleziona un ingrediente"/>';
