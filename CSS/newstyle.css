@@ -419,13 +419,14 @@ hr{
   
 }
 #img-prof2{
-  color:black;
+  color:#fff;
   display: block;
   margin-left: auto;
   margin-right: auto; 
   margin-top: 10px;
   margin-bottom:10px; 
   border-radius: 20px;
+  color:#e6e6e6;
 }
 
 

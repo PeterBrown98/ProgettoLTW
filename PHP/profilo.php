@@ -113,13 +113,13 @@
                   <form action='uploadImg.php' method='post' enctype='multipart/form-data'>
                     <input id='img-prof' type='file' name='profile_photo' value='File' onchange='ValidateSize(this)'>
                     <br>
-                    <input type='submit' name='insert' id='img-prof2' value='Carica'>
+                    <input type='submit' name='insert' class='btn btn-primary' id='img-prof2' value='Carica'>
                   </form>
                   <hr id='hrp'>
 
                   <form action='eliminaProfilo.php' method='post' enctype='multipart/form-data' onsubmit='return eliminaProfilo();'>
                  
-                  <p id='p-prof'> Clicca qui per eliminare il profilo</p> <input type='submit' class='btn btn-danger' name='delete' id='img-prof2' value='Elimina' style = 'color:#e6e6e6'>
+                  <p id='p-prof'> Clicca qui per eliminare il profilo</p> <input type='submit' class='btn btn-danger' name='delete' id='img-prof2' value='Elimina'>
                   </form>
 
               </div>
