@@ -80,8 +80,10 @@
            $nome = str_replace("-", " ", $nome);
     
            echo 
-            "<div class='nomeRicetta text-center'><span class='recipeName'>$nome</span>
+            "<span class='recipeName'>$nome</span>
             <div class='checkbox-container'>
+            
+           
             ";
             
             if(!$x){
@@ -101,7 +103,7 @@
   
             }
 
-          echo"
+          echo" </div>
 
             <script>
             
@@ -153,7 +155,7 @@
             </script>
             
             
-            </div>";
+            ";
            
            
            echo "<section class= 'ingredienti'>";
