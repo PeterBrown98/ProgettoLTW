@@ -61,7 +61,10 @@
           <div class="row" id="row1">
             <div class="col8">
               <h1 id="h1-home">
-              <a class="tipo" href="sceltaIngredienti.php?tipoPiatto=Primo">Primi</a>
+              <a class="tipo" href="sceltaIngredienti.php?tipoPiatto=Primo" style="color: blue">Primi</a>
+              </h1>
+              <p id="p-home">Scegli il primo che fa per te, dai piatti veloci e sfiziosi, alle paste al forno. Sbizzarisciti anche con piatti freschi ed estivi da gustare in compagnia. </p>
+
             </div>
             <div class="col4">
 
@@ -104,8 +107,9 @@
           <div class="row" id="row1">
             <div class="col8">
               <h1 id="h1-home">
-              <a class="tipo" href="sceltaIngredienti.php?tipoPiatto=Secondo">Secondi</a>
+              <a class="tipo" href="sceltaIngredienti.php?tipoPiatto=Secondo"  style="color: blue">Secondi</a>
               </h1>
+              <p id="p-home">Amante della carne? Patito del pesce? I nostri secondi piatti soddisferanno ogni tua necessità, che tu sia in cerca di un secondo facile o di un piatto che metta alla prova le tue abilità.</p>
             </div>
             <div class="col4">
 
@@ -148,8 +152,9 @@
           <div class="row" id="row1">
             <div class="col8">
               <h1 id="h1-home">
-              <a class="tipo" href="sceltaIngredienti.php?tipoPiatto=Contorno">Contorni</a>
+              <a class="tipo" href="sceltaIngredienti.php?tipoPiatto=Contorno"  style="color: blue">Contorni</a>
               </h1>
+              <p id="p-home">Non importa quale verdura tu scelga, in questa sezione troverai qualsiasi ricetta semplice e gustosa per poter preparare il contorno perfetto da servire alla tua tavola. </p>
             </div>
             <div class="col4">
 
@@ -193,8 +198,9 @@
           <div class="row" id="row1">
             <div class="col8">
               <h1 id="h1-home">
-              <a class="tipo" href="sceltaIngredienti.php?tipoPiatto=Dessert">Dolci</a>
+              <a class="tipo" href="sceltaIngredienti.php?tipoPiatto=Dessert"  style="color: blue">Dolci</a>
               </h1>
+              <p id="p-home"> Come concludere un buon pasto se non con un dolce da far leccare i baffi?! La nostra selezione di dolci è piena di ricette che fanno al caso tuo, che tu voglia preparare una torta da comleanno o degli ottimi bignè. </p>
             </div>
             <div class="col4">
 

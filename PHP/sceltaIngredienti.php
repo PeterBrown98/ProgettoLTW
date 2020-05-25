@@ -15,8 +15,9 @@
         <meta name="viewport" content="width-device-width, initial-scale=1"/>
         <meta name="viewport" content="height=device-height, initial-scale=1"/> 
         <script src="awesomplete.js" async></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script>
+        <!-- <script>
         $(document).ready(function(){
             $(".awesomplete").change(function() {
             $(this).css('background-color','green');
@@ -28,7 +29,7 @@
             $("#srchbtn").removeAttr('disabled');
         });
         })
-        </script>
+        </script> -->
 
     </head>
     <body>
@@ -77,12 +78,13 @@
         echo "</header>";
              
         echo "<main>";
-            echo "<h1 class='title' style='text-align: center'>Scegli gli ingredienti che vuoi usare per il tuo <p style='color:green'>$tipo</p></h1>";
+            echo "<h1 class='title' style='text-align: center'>Scegli gli ingredienti che vuoi usare per il tuo <span style='color:green'> $tipo</span></h1>";
             echo "<div  id='ricercaIngredienti' >";
-                echo "<form id='formRicette' action='ricette.php?tipoPiatto=$tipo'method='post'>";
+                echo "<form id='formRicette' action='ricette.php?tipoPiatto=$tipo'method='post' onsubmit='f()
+                '>";
                 echo '<input class="awesomplete" id="ing1" name="i1" list="mylist" placeholder = "Seleziona un ingrediente"/>';
                 echo "<br>";
-                echo "<br>";
+                
                 echo '<input class="awesomplete" id="ing2" name="i2" list="mylist" placeholder = "Seleziona un ingrediente"/>';
                 echo "<br>";
                 echo '<input class="awesomplete" id="ing3" name="i3" list="mylist" placeholder = "Seleziona un ingrediente"/>';
@@ -103,7 +105,7 @@
                     
                         echo "</datalist>";
                         
-                        echo '<button type="submit" class="btn btn-lg btn-primary" id="srchbtn" name="cerca" disabled>Cerca Ricetta</button>';
+                        echo "<button type='submit' class='btn btn-lg btn-primary' id='srchbtn' name='cerca' disabled >Cerca Ricetta</button>";
                         echo "</form>";
                         echo "</div>";
 
@@ -114,9 +116,64 @@
         echo 'Copyright &copy;<script>document.write(new Date().getFullYear());</script>,  Foodream';
         echo "</div>";
         echo "</footer>";
-        echo '<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>';
-        echo '<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>';
-        echo '<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>';
-     ?>         
+       
+   
+     ?>  
+       <script> 
+        $(document).ready(function(){
+         $(".awesomplete").change(function(){
+            var i;
+            var ing="#ing";
+            
+            for(i=0; i< $(".awesomplete").length; i++ ){
+                    if($(".awesomplete")[i].value!=""){
+                        $("#srchbtn").removeAttr('disabled');
+                        var x=i+1;
+                        var ingred=ing+x;
+                        $(ingred).css('background-color','green');
+                       
+                        
+                        var ingred=ing+(x+1);
+                        $(ingred).css('display','block');
+
+                    }
+                    else{
+                        var x=i+1;
+                        var ingred=ing+x;
+                        $(ingred).css('background-color','white');
+                       // $(ingred).css('display','none');
+
+                       }
+                  
+                    }
+                });
+              var i;
+              var ing="#ing";
+              
+              for(i=0; i< $(".awesomplete").length; i++ ){
+                
+                if ($(".awesomplete")[i].value!=""){
+                    $("#srchbtn").removeAttr('disabled');
+                    var x=i+1;
+                    var ingred=ing+x;
+                    $(ingred).css('background-color','green');
+                     
+                    var ingred=ing+(x+1);
+                    $(ingred).css('display','block');
+
+                }
+              }
+              
+            
+        })
+
+        
+
+        </script>   
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+                
+                
     </body>
 </html>

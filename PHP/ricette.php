@@ -78,6 +78,7 @@
                         $i5=$_POST['i5'];
                         if ($i5=="") $i5="nessun ingrediente selezionato";
                         $i6=$_GET['tipoPiatto'];
+                     
                         $query="select * from ricetta where tipo = '$i6'";
                         
                         
