@@ -82,6 +82,8 @@
            echo 
             "<span class='recipeName'>$nome</span>
             <div class='checkbox-container'>
+            
+           
             ";
             
             if(!$x){
@@ -102,7 +104,7 @@
             }
             echo"</div>";
 
-          echo"
+          echo" </div>
 
             <script>
             
