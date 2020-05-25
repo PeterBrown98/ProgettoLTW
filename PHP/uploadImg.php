@@ -33,6 +33,7 @@
             $allowed = array('jpeg', 'png', 'jpg');
            
             $ext = pathinfo($filename, PATHINFO_EXTENSION);
+            
             if ($filename==""){
                 $message = "Non hai inserito nessun file!";
 
