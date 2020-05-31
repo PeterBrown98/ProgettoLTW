@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="../CSS/newstyle.css">
         <link rel="stylesheet" href="awesomplete.css" />
+        <!-- Inseriamo i campi di testo come display none per renderli invisibili all'apertura della pagina -->
         <style type="text/css">
             #ing2{display: none;}
             #ing3{display: none;}
@@ -82,6 +83,7 @@
                 echo "<br>";
                 echo "<br>";
                 echo "<br>";
+                // datalist creato per autocompletamento con gli ingredienti presi da database e fondamentale nell'utilizzo della classe awesomplete
                 echo '<datalist id="mylist">';
                     
                         $db = pg_connect("host=localhost, port=5433, dbname=dbfoodream user=postgres password=postgres");
@@ -106,6 +108,9 @@
        
    
      ?>  
+        <!-- cambia il colore dei capi di testo se selezionato un ingrediente e 
+        partendo dal primo campo di testo mostra il successivo se nel precedente 
+        è avvenuta la scelta, abilita inoltre il bottone di submit se il primo ingrediente è stato scelto -->
        <script> 
         $(document).ready(function(){
          $(".awesomplete").change(function(){
