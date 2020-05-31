@@ -9,8 +9,10 @@
             if(!(isset($_POST["invia"]))){header("Location: ../index.html");}
             else{
                 $email=$_POST['email'];
-                $q1="select * from utente where email=$1";
+                //essendo email primary key in tabella utente viene restituito, se esiste l'utente con email=$email
+                $q1="select * from utente where email=$1"; 
                 $result= pg_query_params($dbconn, $q1, array($email));
+                //se $line non è vuota si viene invitati a riprovare con un'altra email
                 if(($line=pg_fetch_array($result,null,PGSQL_ASSOC))){
                     $message = "Email già utilizzata da un altro utente";
 
@@ -33,7 +35,7 @@
                         </SCRIPT>";
                     }
                     else{
-
+                        //se la registrazione va a buon fine viene inserita una nuova ennupla in utente
                         $q2="insert into utente values ($1, $2, $3, $4)";
                         $data= pg_query_params($dbconn, $q2, array($nome, $cognome, $email, $psw));
 
@@ -48,7 +50,8 @@
 
                         $es_data = pg_escape_bytea($data2);
                         fclose($img);
-                      
+                        
+                        //viene aggiunta una coppia (email,immagine) che rapprenta la relationship utente-immagine
                         $query2 = "insert into images(email, data) values ('$email', '$es_data')";
                         pg_query($dbconn, $query2);
 
