@@ -1,5 +1,5 @@
 <?php
-
+        // elimina ogni riferimento al profilo da ogni tabella nel database
         session_start();
 
         if (isset( $_SESSION['email'] ) ) {

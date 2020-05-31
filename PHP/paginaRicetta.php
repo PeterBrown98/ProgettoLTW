@@ -85,7 +85,7 @@
             
            
             ";
-            
+            //gestione casi di checkbox selezionata o no
             if(!$x){
               echo "<label class='checkbox-label' for'my-checkbox'>
               <input type='checkbox' id='my-checkbox' onclick='ChangeCheckboxLabel(this)'> 
@@ -103,7 +103,8 @@
   
             }
             echo"</div>";
-
+            //Con il prossimo script si cambia il valore display della checkbox per la modifica dello stato da checkbox checked a checkbox unchecked e viceversa e poi si salva
+            //o si elimina la ricetta dai preferiti tramite script ajax
           echo" </div>
 
             <script>
@@ -161,7 +162,7 @@
 
           
        
-           
+           //divisione degli ingredienti presi dal DB in quanto separati tra loro da \t
            $ingredienti = explode('\t',$ricetta[2]);
            foreach($ingredienti as $ingrediente){
              if($ingrediente !==""){

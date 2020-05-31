@@ -129,7 +129,7 @@
               </div>
 
 
-
+            
           
             <div class='row'> 
               
@@ -169,7 +169,7 @@
          Copyright &copy;<script>document.write(new Date().getFullYear());</script>,  Foodream
         </div>
       </footer>
-
+            <!-- Verifica la grandezza dell'immagine e se supera una certa grandezza (6MB) restituisce un messaggio di errore -->
             <script>
           function ValidateSize(file) {
             var FileSize = file.files[0].size / 1024 / 1024; // in MB
@@ -180,7 +180,7 @@
           
         } 
     }
-              
+          // Eliminazione ricetta dai preferiti 
           function elimina(o) {
             if(confirm("Sei sicuro di voler eliminare la ricetta dai preferiti?")){
                 var p=o.parentNode.parentNode;
@@ -197,6 +197,7 @@
                   });
              }
           }
+          // elimina il profilo dal db restituendoti un messaggio di conferma
           function eliminaProfilo() {
             return confirm("Sicuro di voler eliminare il profilo?");
 

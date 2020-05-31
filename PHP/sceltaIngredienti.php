@@ -17,19 +17,6 @@
         <script src="awesomplete.js" async></script>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <!-- <script>
-        $(document).ready(function(){
-            $(".awesomplete").change(function() {
-            $(this).css('background-color','green');
-            var id = $(this).attr("id");
-            if (id=="ing1") $("#ing2").css('display','block');
-            if (id=="ing2") $("#ing3").css('display','block');
-            if (id=="ing3") $("#ing4").css('display','block');
-            if (id=="ing4") $("#ing5").css('display','block');
-            $("#srchbtn").removeAttr('disabled');
-        });
-        })
-        </script> -->
 
     </head>
     <body>
@@ -141,7 +128,6 @@
                         var x=i+1;
                         var ingred=ing+x;
                         $(ingred).css('background-color','white');
-                       // $(ingred).css('display','none');
 
                        }
                   
