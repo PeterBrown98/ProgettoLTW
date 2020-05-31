@@ -57,6 +57,7 @@
       </header>
        
     <main>
+    <!-- Sezione di scelta del tipo del piatto costituita da caroselli bootstrap, ogni link rimanda alla scelta degli ingredienti mantenendo nell'URL il tipo di piatto scelto per rendere più veloce la ricerca nel DB -->
         <div class="container1">
           <div class="row" id="row1">
             <div class="col8">
@@ -102,7 +103,7 @@
             </div>
           </div>
         </div> 
-
+        
         <div class="container1">
           <div class="row" id="row1">
             <div class="col8">

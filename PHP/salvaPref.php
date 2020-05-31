@@ -1,5 +1,6 @@
 
 <?php
+// Inserisce la ricetta selezionata nel database che mette in relazione utenti e ricette per il salvataggio nei preferiti
     $dbs = pg_connect("host=localhost, port=5433, dbname=dbfoodream user=postgres password=postgres");             
    
     $nome = $_GET['nome'];
