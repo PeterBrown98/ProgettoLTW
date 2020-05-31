@@ -78,29 +78,32 @@
                         $i5=$_POST['i5'];
                         if ($i5=="") $i5="nessun ingrediente selezionato";
                         $i6=$_GET['tipoPiatto'];
-                     
+
+                        //seleziona tutte le ricette con  tipo=$i6
                         $query="select * from ricetta where tipo = '$i6'";
                         
                         
                         $result=pg_query($dbconn, $query);
                         $res=array();
+
+                        //array contenente gli ingredienti immessi dall'utente nel form di ricerca
                         $ingr=array($i1, $i2, $i3, $i4, $i5);
                         
 
                     
-                        
+                        //per ogni ricetta di tipo $i6 viene generato un array
                         while(($row = pg_fetch_row($result))){
                         
                 
-                            $cnt=0;
-                            $contenuti="";
+                            $cnt=0; //rappresenta il numero di ingredienti comuni a $ingr
+                            $contenuti="";//stringa contenente i nomi degli ingredienti comuni a $ingr
                             
-                        
+                        //l'array contiene tutte le ricette con almeno un ingrediente comune a $ingr
                         foreach($ingr as $i){
 
                             
                             if(strpos($row[4], $i)!==false) {
-                            $cnt++;
+                            $cnt++; 
                             $contenuti = $contenuti.$i.", ";
                             }
                         }
@@ -108,26 +111,29 @@
 
                             if($cnt>0){
                                 $arr = array();
-                                $arr[0] = $row[1];
-                                $arr[1] = $cnt;
-                                $arr[2] = substr($contenuti, 0, -2);
+                                $arr[0] = $row[1]; // nome ricetta
+                                $arr[1] = $cnt; // numero ingredienti tra quelli scelti dall'utente
+                                $arr[2] = substr($contenuti, 0, -2); // nomi ingredienti tra quelli scelti dall'utente
                                 $b = str_replace(" ", "-", $arr[0]);
-                                $arr[3] = "<a href=paginaRicetta.php?nome=$b id=redir><button type=submit class=btn-primary id=gotoRecipe>$arr[0]</button></a>";
-                            array_push($res,$arr);
+                                $arr[3] = "<a href=paginaRicetta.php?nome=$b id=redir><button type=submit class=btn-primary id=gotoRecipe>$arr[0]</button></a>"; //pulsante che indirizza l'utente alla pagina della ricetta selezionata
+                            array_push($res,$arr); //$arr viene aggiunto a $res
                             }
                         }
 
                         
                         
-                        //ordina $res secondo cmp 
+                        //ordina $res secondo cmp ovvero in modo decrescente rispetto alla posizione n-3 degli array che contiene
                         usort($res,"cmp");
 
+                        // se $res è vuoto informiamo l'utente che nessuna ricetta corrisponde ai suoi criteri di ricerca
                         if(count($res) == 0){
                             echo "<h1 style = 'color:white; padding:30px;'> Nessuna ricetta trovata per gli ingredienti selezionati</h1><br><br>
                             <h1 style = 'color:white; padding:30px;'> Torna alla <a href='sceltaIngredienti.php?tipoPiatto=$i6'>pagina</a> di scelta degli ingredienti</h1>
                             ";
 
-                        }else{
+                        }
+                        // altrimenti viene visualizzata una tabella contenente le ricette che rispettano i criteri di ricerca
+                        else{
                         echo "<table class='risultati'>";
                         echo "<thead>";
                         echo "<tr>";
